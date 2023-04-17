@@ -12,15 +12,64 @@ Homo sapiens er den arten på jordkloden som har tilpasset seg best og utviklet 
 
 Gjennomgang av Solow-modellen. Forklare hva og hvordan matereill velferd og økonomisk vekst oppstår i det lange løp Både grafer og tekst Oppsumer teori med bruk av predikasjon fra teoretisk modell 2 delt fokus, BNP per innbygger i steady state og utenom steady state.
 
-Økonomisk utvikling er grunnprinsippet for materiell forbedring. For å forstå økonomisk utvikling som mål brukes brutto-nasjonal-produkt, BNP. Dette er en verdi på alle goder og tjenester produsert innenfor en økonomi (land eller annet definert område) i løpet av et tidsløp (oftest et år). BNP eller $Y$ er summen av innsatsfaktorene: $C+I+G+X-M$, $
-privat konsum + investeringer + offentlig konsum og investeringer + import - export
-$ Dette gir $C+I+G+X-M=Y$. På lang sikt, som er fokuset til denne oppgaven, er det ingen begrensninger for produksjonen som følge av etterspørsel, kun produksjonsmulighetene. Disse produksjonsmulighetene er påvirket av mengden ressurser tilgjengelig, teknologisk nivå, ressurskvalitet og ressurseffektivisering.
+Økonomisk utvikling er grunnprinsippet for materiell forbedring. For å forstå økonomisk utvikling som mål brukes brutto-nasjonal-produkt, BNP. Dette er en verdi på alle goder og tjenester produsert innenfor en økonomi (land eller annet definert område) i løpet av et tidsløp (oftest et år). BNP eller $Y$ er summen av innsatsfaktorene: $C+I+G+X-M$, \$ privat konsum + investeringer + offentlig konsum og investeringer + import - export \$ Dette gir $C+I+G+X-M=Y$. På lang sikt, som er fokuset til denne oppgaven, er det ingen begrensninger for produksjonen som følge av etterspørsel, kun produksjonsmulighetene. Disse produksjonsmulighetene er påvirket av mengden ressurser tilgjengelig, teknologisk nivå, ressurskvalitet og ressurseffektivisering.
 
 For å måle økonomisk vekst er det viktig å se på BNP per innbygger:
 
-$$(2.1) y=Y/L$$ , BNP per inbygger $$= BNP/Innbyggere$$
+$(2.1) y=Y/L$ , BNP per inbygger $= BNP/Innbyggere$
 
 For at ett land skal kunne oppnå en økning i økonomisk vekst må endringen i BNP per innbygger være større enn endring i befolkningen.
+
+$(2.2) dy/y = dY/Y-dP/P$
+
+Økonomisk vekst er altså en positiv endring i BNP per innbygger. Denne endringen blir mål over tid, så den er avhengig av en tids. Denne variabelen måles oftest i år, men kan også måles i kortere eller lengre intervaller. I denne oppgaven vil det måles i år.
+
+Modellen som brukes for å forklare hvordan materiell velferd og økonomisk vekst oppstår er Solow-modelen, hvor kapitalakkumulasjon, befolkningsvekst og teknologisk fremgang er hovedfaktorene.\
+- Kapitalakkumulasjon eller økningen i kapitalbeholdning er den totale mengden kapital som kan benyttes. Denne er økningen kommer fra de offentlige og private investeringene som gjøres i en økonomi. Det tilsvarer fra BNP funksjonen.\
+- Befolkningsveksten er den naturlige endringen i befolkningen over tid. I teorien som benyttes er det en antagelse om at befolkningen vokser konstant over tid.\
+- Teknologisk fremgang er faktorene som påvirker produktivitet og effektivitet. Teorien predikerer at teknologisk fremgang er konstant og at den over tid har flere effekter. Den påvirker effektiviteten av kapitalen, både forbedring av eksisterende kapital samt ny kapital. Effektiviteten til arbeidskraften går opp som følge av at arbeidere blir mer effektive og de kan benytte mer effektive instrumenter. Samt naturressursene blir både mer effektivt benyttet og utvinnet.
+
+Solow modellen har fire ligninger på basisnivå som er avgjørende for hvordan økonomisk vekst oppstår.
+
+$(2.3) Y(t)=F[K(t), L(t)]$ : funksjon for aggregert produksjon
+
+$(2.4) I(t) = S(t)$: antagelse om at investeringer er lik sparing
+
+$(2.5) S(t) = s * Y(t)$: sparefunksjon, konstant andel av inntekt
+
+$(2.6) L(t) = L_0*e^{nt}$: arbeidskraftfunksjon, forutsetning om konstant befolkningsvekst
+
+De endogene variablene i denne modellen er $Y, K, L, S$ og $I$ , hvor $K$ er kapital, $L$ er arbeidsstyrken, $S$ er sparing og $I$ er investeringer. De eksogene variablene er $s$ og $n$ eller spareraten og den naturlige vekstraten i befolkingen.
+
+Den viktigste variabelen av alle disser er kapitalintensiteten, $k$, eller produksjon per arbeider. Den er definert som $k=\frac{K}{L}$.
+
+Om en ser på effekten av basisfunksjonen for produksjon $(2.3)$ grafisk er det en avtakende grenseproduktivitet for kapital:
+
+```{r Kapitalintensitet, echo=FALSE, warning=FALSE}
+knitr::include_graphics("Kapitalintensitet.png")
+```
+
+I denne grafen kan en se at ved økt kapitalintensitet øker også produksjon per innbygger. Det er derimot slik at ved høyere kapitalintensitet vil effekten av en økning være mindre. Grafen har avtagende helning. Dette, sammen med konstant skalautbytte er forutsetninger som gjøres i modellen.
+
+Tidligere ble kapitalintensiteten definert. Denne gir en generell funksjon for produksjon per innbygger:
+
+$(2.7)y=\frac{Y}{L}=\frac{F(K,L)}{L}=f(k), k=\frac{K}{L}$
+
+Om en ser på hvordan utviklingen er over tid ved bruk av kapitalintensitet, befolkningsvekst og sparing vil en få ut tre utrykk:
+
+$(2.8) k(t)=\frac{K(t)}{L(t)} =>\frac{\partial k(t)}{\partial t}/k(t)$
+
+$(2.9)L(t)=L_0*e^{nt} =>\frac{\partial L(t)}{\partial t}/k(t)=n$
+
+$(2.10)\frac{\partial K(t)}{\partial t}=s*Y(t)$
+
+Ved bruk av disse tre ligningene, $(2.8), (2.9)$ og $(2.10)$ får en ett uttrykk for den viktigste ligningen i Solow-modellen. Endringen i kapitalintensitet over tid gir: $(2.11)\frac{\partial k(t)}{\partial t}=s*y(t)-n*k(t)$
+
+Her er $s*y(t)$ de faktiske investeringene per innbygger, og $n*k(t)$ de nødvendige investeringene som må til for at alle nye arbeidere skal ha tilgang på ny kapital.
+
+Det vil si at i tilfeller der de faktiske investeringene er større enn de nødvendige: $sy > nk$ vil kapitalintensiteten øke, produksjonen per innbygger øker og økonomisk vekst oppstår. I tilfeller der de faktiske investeringene er mindre enn de nødvendige: $sy<nk$ vil kapitalintensiteten minke, produksjonen per innbygger minke og økonomien kan ikke vokse.
+
+Det gjør at en økonomi har to ulike tilstander den kan være i. Enten så er økonomien i endring, det vil si at de faktiske investeringene er større enn de nødvendige, eller motsatt. Eller at investeringene er like store, både faktiske og nødvendige. Ved like store investeringer oppstår det som defineres som steady-state: $sy=nk=> \frac{\partial k}{\partial t}=0$ $\frac{\partial y}{\partial t} =0$.
 
 ## 3. Metode og data
 
@@ -42,6 +91,8 @@ suppressPackageStartupMessages(library(sjmisc))
 suppressPackageStartupMessages(library(sjlabelled))
 suppressPackageStartupMessages(library(knitr))
 suppressPackageStartupMessages(library(vtable))
+suppressPackageStartupMessages(library(imager))
+
 
 #   NY.GDP.PCAP.PP.KD (gdppc) = BNP per innbygger (PPP) 
 #   NY.ADJ.NNAT.GN.ZS (nsy) = Sparing som andel av BNI (netto)
@@ -52,6 +103,10 @@ suppressPackageStartupMessages(library(vtable))
 #   NE.GDI.FTOT.KD.ZG (gi) = Årlig vekstrate i investeringer
 #   NE.EXP.GNFS.KD.ZG (gx) = Årlig vekstrate i eksport
 #   NY.ADJ.DRES.GN.ZS (nry) = Årlig reduksjonsrate i naturressurser
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r BNP/innbygger, warning=FALSE, include=FALSE}
@@ -282,17 +337,17 @@ no_outliers <- subset(df, df$avg_gi > (Q1gi - 1.5*IQRgi) & df$avg_gi < (Q3gi + 1
 dim(no_outliers)
 ```
 
+```{r Log(BNP/innbygger, warning=FALSE, include=FALSE}
+# Lag en variabel som er logaritmen av BNP per innbygger (enklere tolkning og presser sammen fordelingen)
+no_outliers$dppc <-as.numeric(no_outliers$gdppc)
+no_outliers$ln_gdppc<-log(no_outliers$gdppc) 
+no_outliers$ln_gdppc0<-log(no_outliers$gdppc0)
+```
+
 Det ferdige datasettet er laget ved å kombinere flere datasett fra WDI, de første observasjonene i datasettet ser slik ut:
 
 ```{r Datasett til analysen, echo=FALSE, warning=FALSE, results='asis'}
 kable(head(no_outliers[, 1:8]))
-```
-
-```{r Log(BNP/innbygger, warning=FALSE, include=FALSE}
-# Lag en variabel som er logaritmen av BNP per innbygger (enklere tolkning og presser sammen fordelingen)
-df_growth2019$dppc <-as.numeric(df_growth2019$gdppc)
-df_growth2019$ln_gdppc<-log(df_growth2019$gdppc) 
-df_growth2019$ln_gdppc0<-log(df_growth2019$gdppc0)
 ```
 
 ### 3.2 Metode
@@ -311,9 +366,9 @@ I resultatdelen blir dataene bearbeidet for å visualisere økonomisk vekst over
 
 ```{r Tabel1, echo=FALSE, warning=FALSE}
 # Velg ut de variabler du vil ha med i tabellen. Her er et eksempel (du skal ta med alle variabler som du har med i den empiriske analysen)
-df <- subset(no_outliers, select = c("avg_gdpgrowth", "avg_p", "avg_nsy", "avg_educ", "avg_nry", "avg_gi", "avg_n", "avg_gx"))
+df <- subset(no_outliers, select = c("avg_gdpgrowth", "avg_p", "avg_nsy", "avg_educ", "avg_nry", "avg_gi", "avg_n", "avg_gx", "ln_gdppc"))
 # Gi beskrivende navn til variablene (i samme rekkefølge som de ligger i datasettet)
-labs <- c("Årlig vekstrate i BNP", "Årlig befolkningsvekst (%)", "Netto-sparing (andel av BNI)", "Antall år i skole (befolkning 15+", "Reduksjonsrate i naturressurser", "Vekstrate i investeringer", "Vekstrate i arbeidskraft", "Vekstrate i eksport") 
+labs <- c("Årlig vekstrate i BNP", "Årlig befolkningsvekst", "Netto-sparing (andel av BNI)", "Antall år i skole (befolkning 15+", "Reduksjonsrate i naturressurser", "Vekstrate i investeringer", "Vekstrate i arbeidskraft", "Vekstrate i eksport", "BNP per innbygger (log)") 
 
 # Lag tabellen
 st(df, out = 'kable', title = 'Deskriptiv statistikk', labels=labs,
@@ -326,58 +381,193 @@ st(df, out = 'kable', title = 'Deskriptiv statistikk', labels=labs,
    ))
 ```
 
+Som vi ser fra tabellen over er det hentet ut info om utviklingen i forskjellige endogene verdier. Tabellen viser verdier for vekstrate i BNP, befolkningsvekst, netto-sparing, antall år i skole, reduksjonsrate i naturressurser, vekst i investeringer, vekst i arbeidskraft, vekst i eksport og BNP per innbygger på log form. Tabellen viser verdier for antall, gjennomsnitt, standardavvik, laveste verdi og største verdi. Tabellen sier ikke så mye i seg selv, men den gir en oversikt over hvordan dataene ser ut.
 
-
-
-
-
-
-Som vi ser fra tabellen...
-
-```{r Plot1, echo=FALSE, warning=FALSE}
+```{r BNP(log) og sparing, echo=FALSE, warning=FALSE}
 plot1 <- ggplot(no_outliers, aes(x = avg_nsy , y = ln_gdppc, na.rm = TRUE)) +
   xlab("Sparing som andel av BNI (Netto)") + # Beskrivelse for x-akselen
   ylab("BNP per innbygger 2019") + # Beskrivelse for y-akselen
-  theme_minimal(base_size = 14, base_family = "Georgia") + # Tekststørrelse og font
+  theme_minimal(base_size = 14) + # Tekststørrelse og font
   geom_point(aes(size = poptot, color = region), alpha = 0.8) + # Størrelse (farge) på bobblene avhenger befolkningsstørrelse (region)
-  scale_x_continuous(labels = dollar)  + # Legg til et dollar tegn til y-akselen
+  
   scale_size_area(guide = "none", max_size = 14) + #Ta vekk legend for befolkningsstørrelse
-  theme(legend.text = element_text(size = 10,color="black"))+  # Bestem font-størrelse på legend
+  theme(legend.text = element_text(size = 8,color="black"),
+        legend.title = element_blank(),
+        legend.key.height = unit(.3, 'cm'),
+        legend.key.width = unit(.3, 'cm'))+  # Bestem font-størrelse på legend
   scale_colour_manual(values = rainbow(9)) +# Velg farger til bobblene
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_rect(fill = 'white'))+
+  labs(title = "Figur 1: BNP/innbygger og sparing") + 
   scale_y_continuous(trans = 'log2', labels = dollar, breaks=c(500, 2000, 8000, 32000, 120000)) + # logaritmere BNP pc og velg hvilke "ticks" som skal vises
   scale_x_continuous(breaks=c(-7.5,-5,-2.5,0,2.5,5,7.5,10,12.5,15,17.5,20,22.5,25,27.5)) # Velg vilke "ticks" som skal vises på x-akselen
 plot1
 ```
 
-```{r Plot2, echo=FALSE, warning=FALSE}
+Grafen viser sammenhengen mellom BNP per innbygger (log) og sparing som andel av BNI (netto). Fra grafen er det vanskelig å dra noen direkte konklusjon eller si at det er en korrelasjon mellom de to variablene. En kan derimot observere at land i "Sub-Saharan Africa" har lavere nivå på BNP per innbygger mens "Europe & Central Asia" har høyere nivå på BNP per innbygger.
+
+```{r BNP(log) og befolkningsvekst, echo=FALSE, warning=FALSE}
 plot2 <- ggplot(no_outliers, aes(x = avg_p , y = ln_gdppc, na.rm = TRUE)) +
   xlab("Befolkningsvekst") + # Beskrivelse for x-akselen
   ylab("BNP per innbygger 2019") + # Beskrivelse for y-akselen
-  theme_minimal(base_size = 14, base_family = "Georgia") + # Tekststørrelse og font
+  theme_minimal(base_size = 14) + # Tekststørrelse og font
   geom_point(aes(size = poptot, color = region), alpha = 0.8) + # Størrelse (farge) på bobblene avhenger befolkningsstørrelse (region)
-  scale_x_continuous(labels = dollar)  + # Legg til et dollar tegn til y-akselen
   scale_size_area(guide = "none", max_size = 14) + #Ta vekk legend for befolkningsstørrelse
-  theme(legend.text = element_text(size = 10,color="black"))+  # Bestem font-størrelse på legend
+  theme(legend.text = element_text(size = 8,color="black"),
+        legend.title = element_blank(),
+        legend.key.height = unit(.3, 'cm'),
+        legend.key.width = unit(.3, 'cm'))+  # Bestem font-størrelse på legend
   scale_colour_manual(values = rainbow(9)) +# Velg farger til bobblene
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_rect(fill = 'white'))+
+  labs(title = "Figur 2: BNP/innbygger og befolkningsvekst") + 
   scale_y_continuous(trans = 'log2', labels = dollar, breaks=c(500, 2000, 8000, 32000, 120000)) + # logaritmere BNP pc og velg hvilke "ticks" som skal vises
   scale_x_continuous(breaks=c(-1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5 )) # Velg vilke "ticks" som skal vises på x-akselen
 plot2
 ```
 
-```{r}
+Den neste grafen viser sammenhengen mellom BNP per innbygger (log) og befolkningsvekst. Samme sitasjon som grafen over, kan ikke dra noen konkret korrelasjon, blå land har lav BNP, oransje har høyere BNP. Ser ut til at grafen har en negativ helning. Det vil si at land som har en høy befolkningsvekst har lav BNP per innbygger og land med lav befolkningsvekst har høy BNP per innbygger. Om dette er en konkret sammenheng kan derimot ikke bekreftes.
+
+```{r BNP(log) og humankapital, echo=FALSE, warning=FALSE}
 plot3 <- ggplot(no_outliers, aes(x = avg_educ , y = ln_gdppc, na.rm = TRUE)) +
   xlab("Humankapital, utdanning") + # Beskrivelse for x-akselen
   ylab("BNP per innbygger 2019") + # Beskrivelse for y-akselen
-  theme_minimal(base_size = 14, base_family = "Georgia") + # Tekststørrelse og font
+  theme_minimal(base_size = 14) + # Tekststørrelse og font
   geom_point(aes(size = poptot, color = region), alpha = 0.8) + # Størrelse (farge) på bobblene avhenger befolkningsstørrelse (region)
-  scale_x_continuous(labels = dollar)  + # Legg til et dollar tegn til y-akselen
   scale_size_area(guide = "none", max_size = 14) + #Ta vekk legend for befolkningsstørrelse
-  theme(legend.text = element_text(size = 10,color="black"))+  # Bestem font-størrelse på legend
+ theme(legend.text = element_text(size = 8,color="black"),
+        legend.title = element_blank(),
+        legend.key.height = unit(.3, 'cm'),
+        legend.key.width = unit(.3, 'cm'))+  # Bestem font-størrelse på legend
   scale_colour_manual(values = rainbow(9)) +# Velg farger til bobblene
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_rect(fill = 'white'))+
+  labs(title = "Figur 3: BNP/innbygger og humankapital") + 
   scale_y_continuous(trans = 'log2', labels = dollar, breaks=c(500, 2000, 8000, 32000, 120000)) + # logaritmere BNP pc og velg hvilke "ticks" som skal vises
   scale_x_continuous(breaks=c(0,2.5,5,7.5,10,12.5,15)) # Velg vilke "ticks" som skal vises på x-akselen
 plot3
 ```
+
+Figur 3 viser igjen BNP per innbygger (log) på y-aksen mens på x-aksen er det humankapital, målt i antall år i skole. Figur 3 ser ut til å ha positiv helning, hvor land med bedre humankapital også har høyere BNP per innbygger. Om det er en direkte korrelasjon og om det er statistisk sammenheng kan ikke tydes fra grafen derimot.
+
+```{r Vekstrate BNP og sparing, echo=FALSE, warning=FALSE}
+plot4 <- ggplot(no_outliers, aes(x = avg_nsy , y = avg_gdpgrowth, na.rm = TRUE)) +
+  xlab("Sparing som andel av BNI (Netto)") + # Beskrivelse for x-akselen
+  ylab("Vekstrate i BNP per innbygger") + # Beskrivelse for y-akselen
+  theme_minimal(base_size = 14) + # Tekststørrelse og font
+  geom_point(aes(size = poptot, color = region), alpha = 0.8) + # Størrelse (farge) på bobblene avhenger befolkningsstørrelse (region)
+  scale_size_area(guide = "none", max_size = 14) + #Ta vekk legend for befolkningsstørrelse
+ theme(legend.text = element_text(size = 8,color="black"),
+        legend.title = element_blank(),
+        legend.key.height = unit(.3, 'cm'),
+        legend.key.width = unit(.3, 'cm'))+  # Bestem font-størrelse på legend
+  scale_colour_manual(values = rainbow(9)) +# Velg farger til bobblene
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_rect(fill = 'white'))+
+  labs(title = "Figur 4: Vekstrate i BNP og sparing") +
+  scale_y_continuous() +
+  scale_x_continuous(breaks=c(-7.5,-5,-2.5,0,2.5,5,7.5,10,12.5,15,17.5,20,22.5,25,27.5)) # Velg vilke "ticks" som skal vises på x-akselen
+plot4
+```
+
+Figur 4 viser sammenhengen mellom vekstraten i BNP per innbygger og sparing. Grafen er vanskelig å tyde, det ser ikke ut til å være noen direkte korrelasjon.
+
+```{r Vekstrate BNP og humankapital, echo=FALSE, warning=FALSE}
+plot5 <- ggplot(no_outliers, aes(x = avg_educ , y = avg_gdpgrowth, na.rm = TRUE)) +
+  xlab("Humankapital, utdanning") + # Beskrivelse for x-akselen
+  ylab("Vekstrate i BNP per innbygger") + # Beskrivelse for y-akselen
+  theme_minimal(base_size = 14) + # Tekststørrelse og font
+  geom_point(aes(size = poptot, color = region), alpha = 0.8) + # Størrelse (farge) på bobblene avhenger befolkningsstørrelse (region)
+  scale_size_area(guide = "none", max_size = 14) + #Ta vekk legend for befolkningsstørrelse
+ theme(legend.text = element_text(size = 8,color="black"),
+        legend.title = element_blank(),
+        legend.key.height = unit(.3, 'cm'),
+        legend.key.width = unit(.3, 'cm'))+  # Bestem font-størrelse på legend
+  scale_colour_manual(values = rainbow(9)) +# Velg farger til bobblene
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_rect(fill = 'white'))+
+  labs(title = "Figur 5: Vekstrate i BNP og humankapital") +
+  scale_y_continuous() +
+  scale_x_continuous(breaks=c(0,2.5,5,7.5,10,12.5,15)) # Velg vilke "ticks" som skal vises på x-akselen
+plot5
+```
+
+Figur 5 viser sammenhengen mellom vekstrate i BNP per innbygger og humankapital. Igjen, litt utfordrende å tyde om det er noen direkte sammenheng.
+
+### 4.2 Økonometrisk analyse
+
+```{r Linreg1, echo=FALSE, warning=FALSE}
+regression <- no_outliers %>% 
+  dplyr::rename(BNP_per_innbygger = gdppc,
+                Sparing_andel_BNI = avg_nsy,
+                Befolkning = poptot,
+                Befolkningsvekstrate = avg_p,
+                Utdanning = avg_educ,
+                Investeringsvekstrate = avg_gi,
+                Eksportvekstrate = avg_gx,
+                Reduksjonsrate_i_naturressurser = avg_nry,
+                BNP_per_innbygger_log = ln_gdppc)
+
+model1 <- lm(BNP_per_innbygger_log  ~ Sparing_andel_BNI + Investeringsvekstrate, data= regression)
+#tab_model(model1, CSS = css_theme("cells"))
+knitr::include_graphics("Model1.png")
+```
+
+Regresjonen over viser sammenhengen mellom utvalgte forklarende variabler og verdien på BNP per innbygger i log format.
+
+Før regresjonen og analysen kan gjennomføres er det nødvendig å definere nullhypotese: $H_0$ og alternativhypotese: $H_1$:
+
+$H_0$: Det er ingen sammenheng mellom nivå på BNP per innbygger og forklarende variabel.
+
+$H_1$: Det er sammenheng mellom BNP per innbygger og forklarende variabel.
+
+Den første forklarende variabelen er sparing som andel av BNI. Den har en liten negativ påvirkning på BNP, -0,00, men en ikke signifikant p-verdi. Det vil si at nullhypotesen beholdes og en kan ikke konkludere med at det er ett sammenheng mellom BNP og sparing fra vår data.
+
+Neste forklarende variabel er årlig vekstrate i investeringer. Den har en liten negativ påvirkning på BNP, -0,16, men en p-verdi som er signifikant. Det betyr at nullhypotesen forkastes og at nivået på BNP påvirkes av vekstraten i investeringer.
+
+Denne tabellen har lav $R^2$, noe som betyr at disse to verdiene kun forklarer rundt 25% av utvikling i BNP per innbygger.
+
+```{r Lingre2, echo=FALSE, warning=FALSE}
+model2 <- lm(BNP_per_innbygger_log ~ Befolkningsvekstrate + Utdanning +  Eksportvekstrate, data = regression)
+#tab_model(model2, CSS = css_theme("cells"))
+knitr::include_graphics("Model2.png")
+```
+
+Neste tabell starter med forklarende variabel befolkningsvekstrate. Denne har en liten negativ påvirkning på BNP, -0,14, og p-verdien er signifikant. Nullhypotesen forkastes. Dette betyr at en økning i befolkningsvekstrate har en negativ effekt på BNP per innbygger. Altså at ved en økning i hvor mange mennesker som fødes per år vil verdien på BNP per innbygger falle.
+
+Neste forklarende variabel utdanning. Utdanning har en positivt påvirkning på BNP, 0,29, og en signifikant p-verdi. Nullhypotesen kan dermed forkastes, utdanning har en påvirkning på BNP per innbygger. Det vil si at for hvert ekstra år med utdanning i snitt så øker BNP per innbygger med en verdi på 0,29
+
+Siste forklarende variabel er eksportvekstrate. Den har ingen påvirkning samtidig som det er en veldig høy p-verdi. Den påvirker altså ikke BNP i det hele tatt.
+
+$R^2$ er større i modell 2 enn i 1. De forklarende variablene i tabellen er bedre indikatorer på hva som påvirker utviklingen i BNP per innbygger.
+
+```{r LingregStor, echo=FALSE, warning=FALSE}
+#tab_model(model1, model2, CSS = css_theme("cells"))
+knitr::include_graphics("Model3.png")
+```
+
+## 5. Diskusjon
+
+I diskusjonen skal du tolke og diskutere dine resultater. I diskusjonen skal du besvare følgende spørsmål: Støtter resultatene prediksjonene fra Solow-modellen? Hva betyr resultatene? Hvilke konklusjoner kan vi dra fra den empiriske analysen? Finnes det noen problemer med analysen eller datamaterialet som fører til at vi kanskje ikke burde dra for sterke konklusjoner?
+
+Til slutt skal du diskutere implikasjoner for policy (politiske inngrep). Basert på din analyse, hva ville du anbefale at politiker, som ønsker å oppnå bærekraftig vekst, skal føre for politikk?
+
+Etter å ha tolket alle tabeller og grafer som har mulighet til å gi svar på problemstillingen er det noen klare konklusjoner som kan trekkes
+
+De verdiene som er forventet å påvirke positivt:
+
+-   Vekstrate i teknologi
+-   Vekstrate i kvalitet på kapital
+-   Vekstrate i kvalitet på arbeid
+-   Vekstrate i kvalitet på naturressurser.
+
+Alle over kan forklares av teknologisk utvikling
+
+-   Spareraten
+-   Vekstraten i arbeidskraften
+
+De verdiene som er forventet å påvirke negativt:
+
+-   Reduksjonsrate i naturressurser
+-   Befolkningsveksten
+
+Vår data inneholder verdier for teknologisk utvikling i form av humankapital (utdanning). Denne verdien viste seg å både ha en positiv påvirkning på BNP per innbygger, samtidig som at den hadde en signifikant p-verdi. Det betyr at observasjonene korrelerer med vår prediksjon.
+
+Spareraten er forventet å påvirker på en sånn måte at ved høyere sparerate så vil BNP per innbygger vokse. I vår data har spareraten en negativ effekt på BNP per innbygger samtidig som dataene ikke er signifikant. Noen direkte konklusjon kan dermed ikke trekkes.
+
+Vekstraten i arbeidskraft eller befolkningsvekstraten påvirker positivt. Singifikant. Stemmer med teori.
