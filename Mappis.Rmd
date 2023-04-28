@@ -2,17 +2,23 @@
 title: "Bærekraftig økonomisk vekst"
 output: pdf_document
 date: "2023-04-14"
+fig_width: 6 
+fig_height: 4 
+bibliography: references.bib
+csl: norsk-apa-manual-note.csl
 ---
 
 ## 1. Introduksjon
 
-Homo sapiens er den arten på jordkloden som har tilpasset seg best og utviklet seg lengst. Arten har over tid klart å oppnå mye, og utviklingen har skjedd eksponentielt. Fra å leve som nomadiske jegere og sankere med lav materiell velferd, levestandard og kort forventet levealder, kan mennesket i dag fryde seg over evnen til å utforske verdensrommet, knytte mennesker over hele verden sammen og kureringen av dødelige sykdommer. Alt dette har vært med på å øke menneskets materielle velferd, levestandard og forventet levealder. Denne oppgaven blir å analysere utviklingen i materiell velferd. Materiell velferd er avhengig av teknologisk utvikling og befolkningsvekst, og målet med denne oppgaven er å gi et utrykk for denne utviklingen. I dag er det store kontraster mellom land angående både økonomisk vekst og potensiale for økonomisk vekst. Derfor er det interessant å se på hvorfor noen land har bedre materiell velferd enn andre og hvorfor potensialet for økonomisk vekst er høyere i noen land enn andre. Denne oppgaven blir å benytte seg av modeller og matematiske utregninger for økonomisk vekst for å svare på det overordnede spørsmålet: hvilke faktorer bestemmer økonomisk vekst i materiell velferd i det lange løp? Oppgaven blir å bestå av en teoridel, denne gjør rede for den relevante teorien som benyttes. Her er det både teori i form av matematiske funksjoner og økonomisk intuisjon som blir redegjort. Videre vil den inneholde en metodedel hvor gjennomgangen av dataen som benyttes blir gjort. Her forklares de ulike datasettene som benyttes samt hvordan datasett og pakker er strukturert. Resultatene presenteres, både grafisk og skriftlig. Resultatene vil så brukes i diskusjonsdelen. I diskusjonen sammenlignes den teoretiske innledningen med den analytiske resultatdelen. Til slutt er det en konklusjon som er med på å oppsummere hele oppgaven samt besvarer på problemstillingen.
+*Homo sapiens* er den arten på jordkloden som har tilpasset seg best og utviklet seg lengst. Arten har over tid klart å oppnå mye fra et lite utgangspukt. Fra å leve som nomadiske jegere og sankere med lav materiell velferd, levestandard og kort forventet levealder, kan menneskeheten i dag fryde seg over evnen hva den har oppnådd; utforske verdensrommet, knytte mennesker over hele verden sammen og kureringen av dødelige sykdommer. Alt dette har vært med på å øke menneskets materielle velferd, levestandard og forventet levealder. Denne oppgaven blir å analysere utviklingen i materiell velferd. Materiell velferd er avhengig av teknologisk utvikling og befolkningsvekst, og målet med denne oppgaven er å gi et uttrykk for denne utviklingen.
+
+I dag er det store kontraster på økonomisk vekst og potensiale for økonomisk vekst i ulike land. Derfor er det interessant å se på hvorfor noen land har bedre materiell velferd enn andre og hvorfor potensialet for økonomisk vekst er høyere i noen land enn andre. Denne oppgaven blir å benytte seg av modeller og matematiske utregninger for økonomisk vekst for å svare på det overordnede spørsmålet: hvilke faktorer bestemmer økonomisk vekst i materiell velferd i det lange løp?
+
+Oppgaven blir å bestå av en teoridel, denne gjør rede for den relevante teorien som benyttes. Her er det både teori i form av matematiske funksjoner og økonomisk intuisjon som blir redegjort. Videre vil den inneholde en metodedel hvor dataene forklares. De ulike datasettene som benyttes samt hvordan datasett og pakker er strukturert. Resultatene presenteres, både grafisk og skriftlig. I diskusjonen sammenlignes den teoretiske innledningen med den analytiske resultatdelen. Til slutt er det en konklusjon som er med på å oppsummere hele oppgaven samt besvarer på problemstillingen.
 
 ## 2. Teori
 
-Gjennomgang av Solow-modellen. Forklare hva og hvordan matereill velferd og økonomisk vekst oppstår i det lange løp Både grafer og tekst Oppsumer teori med bruk av predikasjon fra teoretisk modell 2 delt fokus, BNP per innbygger i steady state og utenom steady state.
-
-Økonomisk utvikling er grunnprinsippet for materiell forbedring. For å forstå økonomisk utvikling som mål brukes brutto-nasjonal-produkt, BNP. Dette er en verdi på alle goder og tjenester produsert innenfor en økonomi (land eller annet definert område) i løpet av et tidsløp (oftest et år). BNP eller $Y$ er summen av innsatsfaktorene: $C+I+G+X-M$, \$ privat konsum + investeringer + offentlig konsum og investeringer + import - export \$ Dette gir $C+I+G+X-M=Y$. På lang sikt, som er fokuset til denne oppgaven, er det ingen begrensninger for produksjonen som følge av etterspørsel, kun produksjonsmulighetene. Disse produksjonsmulighetene er påvirket av mengden ressurser tilgjengelig, teknologisk nivå, ressurskvalitet og ressurseffektivisering.
+Økonomisk utvikling er grunnprinsippet for materiell forbedring. For å forstå økonomisk utvikling som mål brukes brutto-nasjonal-produkt, BNP. Dette er en verdi på alle goder og tjenester produsert innenfor en økonomi (land eller annet definert område) i løpet av en bestemt periode (oftest et år). BNP eller $Y$ er summen av innsatsfaktorene: $C+I+G+X-M$, privat konsum + investeringer + offentlig konsum og investeringer + import - export Dette gir $C+I+G+X-M=Y$. På lang sikt, som er hva denne oppgaven er rettet mot, er det ingen begrensninger for produksjonen som følge av etterspørsel, kun produksjonsmulighetene. Disse produksjonsmulighetene er påvirket av mengden ressurser tilgjengelig, teknologisk nivå, ressurskvalitet og ressurseffektivisering.
 
 For å måle økonomisk vekst er det viktig å se på BNP per innbygger:
 
@@ -22,12 +28,15 @@ For at ett land skal kunne oppnå en økning i økonomisk vekst må endringen i 
 
 $(2.2) dy/y = dY/Y-dP/P$
 
-Økonomisk vekst er altså en positiv endring i BNP per innbygger. Denne endringen blir mål over tid, så den er avhengig av en tids. Denne variabelen måles oftest i år, men kan også måles i kortere eller lengre intervaller. I denne oppgaven vil det måles i år.
+Økonomisk vekst er altså en positiv endring i BNP per innbygger. Denne endringen blir mål over tid, så den er avhengig av en tidsvariabel.
 
-Modellen som brukes for å forklare hvordan materiell velferd og økonomisk vekst oppstår er Solow-modelen, hvor kapitalakkumulasjon, befolkningsvekst og teknologisk fremgang er hovedfaktorene.\
-- Kapitalakkumulasjon eller økningen i kapitalbeholdning er den totale mengden kapital som kan benyttes. Denne er økningen kommer fra de offentlige og private investeringene som gjøres i en økonomi. Det tilsvarer fra BNP funksjonen.\
-- Befolkningsveksten er den naturlige endringen i befolkningen over tid. I teorien som benyttes er det en antagelse om at befolkningen vokser konstant over tid.\
-- Teknologisk fremgang er faktorene som påvirker produktivitet og effektivitet. Teorien predikerer at teknologisk fremgang er konstant og at den over tid har flere effekter. Den påvirker effektiviteten av kapitalen, både forbedring av eksisterende kapital samt ny kapital. Effektiviteten til arbeidskraften går opp som følge av at arbeidere blir mer effektive og de kan benytte mer effektive instrumenter. Samt naturressursene blir både mer effektivt benyttet og utvinnet.
+Modellen som brukes for å forklare hvordan materiell velferd og økonomisk vekst oppstår er Solow-modelen, hvor kapitalakkumulasjon, befolkningsvekst og teknologisk fremgang er hovedfaktorene.
+
+-   Kapitalakkumulasjon eller økningen i kapitalbeholdning er den totale mengden kapital som kan benyttes. Denne er økningen kommer fra de offentlige og private investeringene som gjøres i en økonomi.
+
+-   Befolkningsveksten er den naturlige endringen i befolkningen over tid. I denne oppgaven er det gjort en antagelse om at befolkningen vokser konstant over tid for å forenkle. I virkeligheten er befolkningsveksten alltid i endring.
+
+-   Teknologisk fremgang er faktorene som påvirker produktivitet og effektivitet. Teorien predikerer at teknologisk fremgang er konstant og at den over tid har flere effekter. Den påvirker effektiviteten av kapitalen, både ved å oppgradere eksisterende kapital og forbedring av ny kapital. Effektiviteten til arbeidskraften går opp som følge av at arbeidere blir mer effektive og de kan benytte mer effektive instrumenter og verktøy. Samt naturressursene blir både mer effektivt benyttet og utvinningen forbedres.
 
 Solow modellen har fire ligninger på basisnivå som er avgjørende for hvordan økonomisk vekst oppstår.
 
@@ -39,13 +48,13 @@ $(2.5) S(t) = s * Y(t)$: sparefunksjon, konstant andel av inntekt
 
 $(2.6) L(t) = L_0*e^{nt}$: arbeidskraftfunksjon, forutsetning om konstant befolkningsvekst
 
-De endogene variablene i denne modellen er $Y, K, L, S$ og $I$ , hvor $K$ er kapital, $L$ er arbeidsstyrken, $S$ er sparing og $I$ er investeringer. De eksogene variablene er $s$ og $n$ eller spareraten og den naturlige vekstraten i befolkingen.
+De endogene variablene i denne modellen er $Y, K, L, S$ og $I$ , hvor $K$ er kapital, $L$ er arbeidsstyrken, $S$ er sparing og $I$ er investeringer. De eksogene variablene er $s$ og $n$ eller spareraten og den naturlige vekstraten i befolkningen.
 
 Den viktigste variabelen av alle disser er kapitalintensiteten, $k$, eller produksjon per arbeider. Den er definert som $k=\frac{K}{L}$.
 
 Om en ser på effekten av basisfunksjonen for produksjon $(2.3)$ grafisk er det en avtakende grenseproduktivitet for kapital:
 
-```{r Kapitalintensitet, echo=FALSE, warning=FALSE}
+```{r Kapitalintensitet, echo=FALSE, warning=FALSE, out.width="300px", out.height="300px"}
 knitr::include_graphics("Kapitalintensitet.png")
 ```
 
@@ -55,7 +64,7 @@ Tidligere ble kapitalintensiteten definert. Denne gir en generell funksjon for p
 
 $(2.7)y=\frac{Y}{L}=\frac{F(K,L)}{L}=f(k), k=\frac{K}{L}$
 
-Om en ser på hvordan utviklingen er over tid ved bruk av kapitalintensitet, befolkningsvekst og sparing vil en få ut tre utrykk:
+Om en ser på hvordan utviklingen er over tid ved bruk av kapitalintensitet, befolkningsvekst og sparing vil en få ut tre uttrykk:
 
 $(2.8) k(t)=\frac{K(t)}{L(t)} =>\frac{\partial k(t)}{\partial t}/k(t)$
 
@@ -67,13 +76,33 @@ Ved bruk av disse tre ligningene, $(2.8), (2.9)$ og $(2.10)$ får en ett uttrykk
 
 Her er $s*y(t)$ de faktiske investeringene per innbygger, og $n*k(t)$ de nødvendige investeringene som må til for at alle nye arbeidere skal ha tilgang på ny kapital.
 
+I en økonomi er det nivået på spareraten som avgjør om det kan oppstå vekst. I tilfeller der en økonomi har lite kapital i utgangspunktet kan sparing brukes til raskt øke kapital og dermed produksjon. Om en økonomi har mye kapital må investeringer brukes for å reparere og fornye eksisterende kapital. [@hess2016economic]
+
 Det vil si at i tilfeller der de faktiske investeringene er større enn de nødvendige: $sy > nk$ vil kapitalintensiteten øke, produksjonen per innbygger øker og økonomisk vekst oppstår. I tilfeller der de faktiske investeringene er mindre enn de nødvendige: $sy<nk$ vil kapitalintensiteten minke, produksjonen per innbygger minke og økonomien kan ikke vokse.
+
+```{r UtforSteadystate, echo=FALSE, warning=FALSE, out.width="400px", out.height="400px"}
+knitr::include_graphics("UtforSteadystate.PNG")
+```
 
 Det gjør at en økonomi har to ulike tilstander den kan være i. Enten så er økonomien i endring, det vil si at de faktiske investeringene er større enn de nødvendige, eller motsatt. Eller at investeringene er like store, både faktiske og nødvendige. Ved like store investeringer oppstår det som defineres som steady-state: $sy=nk=> \frac{\partial k}{\partial t}=0$ $\frac{\partial y}{\partial t} =0$.
 
-## 3. Metode og data
+```{r Steadystate, echo=FALSE, warning=FALSE, out.width="400px", out.height="400px"}
+knitr::include_graphics("Steadystate.PNG")
+```
 
-I avsnitt 3 skal du beskrive hvilke data du har brukt i analysen din, og hvilken metode du brukte for å analysere datamaterialet.
+Steady state er det nivået som tilsvarer stabilitet i en økonomi. Alle investeringer som gjøres går til å reparere eller fornye eksisterende kapital. Ingen nye maskiner eller redskaper blir produsert. Det vil si at i steady state nivået på kapitalintensitet tilsvarer steady state nivået på total-produksjon, BNP.
+
+Om en økonomi er i steady state er det ikke mulig å øke kapitalintensitet og dermed heller ikke øke produksjon. Derfor er det nødvendig å øke spareraten. Det vil si at de faktiske investeringene som gjennomføres blir flere og større. Dette skifter $s*y$ kurva opp, og økonomien får ett nytt steady state nivå med økt kapitalintensitet.
+
+```{r OektInvest, echo=FALSE, warning=FALSE, out.width="400px", out.height="400px"}
+knitr::include_graphics("OektInvest.PNG")
+```
+
+$s^1*y$ viser opprinnelig nivå på investeringer og $k^1$ opprinnelig nivå på kapitalintensitet. Ved en økning i nivået på investering $s^1$ =\> $s^2$ vil kapitalintentisteten også øke $k^1$ =\> $k^2$. Resultatet av dette er økt produksjon, økonomisk vekst, til ett nytt steady state nivå: $s^2 * y = n*k$.
+
+Isolert sett vil det si at spareraten er avgjørende for om en økonomi kan oppnå økonomisk vekst. Alle økonomier vil over tid utvikle seg til ett steady state nivå der veksten stoppes. For å kunne videreutvikle seg fra steady state må investeringsraten øke samtidig som befolkningsveksten er konstant.
+
+## 3. Metode og data
 
 ### 3.1 Data
 
@@ -92,58 +121,40 @@ suppressPackageStartupMessages(library(sjlabelled))
 suppressPackageStartupMessages(library(knitr))
 suppressPackageStartupMessages(library(vtable))
 suppressPackageStartupMessages(library(imager))
-
-
-#   NY.GDP.PCAP.PP.KD (gdppc) = BNP per innbygger (PPP) 
-#   NY.ADJ.NNAT.GN.ZS (nsy) = Sparing som andel av BNI (netto)
-#   SP.POP.TOTL (poptot) = Befolkningsstørrelse
-#   JI.TLF.TOTL (lf) = Størrelse på arbeidskraften
-#   SP.POP.GROW (p) = Vekstrate i befolkningen
-#   BAR.SCHL.15UP (educ) = Gjennomsnittlig antall år i skole (befolkning 15+)
-#   NE.GDI.FTOT.KD.ZG (gi) = Årlig vekstrate i investeringer
-#   NE.EXP.GNFS.KD.ZG (gx) = Årlig vekstrate i eksport
-#   NY.ADJ.DRES.GN.ZS (nry) = Årlig reduksjonsrate i naturressurser
-```
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(stargazer))
+suppressPackageStartupMessages(library(cowplot))
+suppressPackageStartupMessages(library(patchwork))
 ```
 
 ```{r BNP/innbygger, warning=FALSE, include=FALSE}
-#WDI-variabel =  "NY.GDP.PCAP.PP.KD". 
-# Velg startår = 2000 og sluttår = 2019
+
 df_gdp0 <- WDI(
   country = "all",
   indicator = c('gdppc'="NY.GDP.PCAP.PP.KD"),  
   start = 2000,
   end = 2019,
-  extra = TRUE, # det å sette "extra = TRUE" fører til at vi laster inn ekstra informasjon som vi kan benytte seinere (f.eks. variabelen "region")
+  extra = TRUE,
   cache = NULL,
   latest = NULL,
   language = "en"
 )
 
-df_gdp <- subset(df_gdp0, select = c(country, region, income, iso2c, iso3c, year, gdppc) ) %>%  arrange(iso3c, year) # velg ut relevante variabler
-df_gdp <- df_gdp %>% mutate_at(c('iso3c'), ~na_if(., '')) # Vi ønsker å ta vekk land som ikke har en iso3c kode. Dessverre er manglende observasjoner for "iso3c" (landkode) kodet som "blanks" isteden for "missing". Denne koden korrigerer dette.
-df_gdp <- df_gdp[complete.cases( df_gdp$gdppc, df_gdp$iso3c),] # Ta vekk observasjoner som mangler data på gdppc og iso3c. 
+df_gdp <- subset(df_gdp0, select = c(country, region, income, iso2c, iso3c, year, gdppc) ) %>%  arrange(iso3c, year)
+df_gdp <- df_gdp %>% mutate_at(c('iso3c'), ~na_if(., ''))
+df_gdp <- df_gdp[complete.cases( df_gdp$gdppc, df_gdp$iso3c),]
 df_gdp = df_gdp  %>%  
-  mutate(year = as.numeric(year)) # Se til at year er en numerisk variabel. 
-
-# Noen land har flere observasjoner for samme år (f.eks afghanistan år 2010). Vi ønsker å ha én observasjon per land og år. 
-df_gdp <- df_gdp[!duplicated(df_gdp[c("iso3c", "year", max("gdppc"))]), ]  %>%  arrange(iso3c, year) # Ta vekk duplikater for land og år, behold observasjonen med størst gdppc (denne regelen kan diskuteres)
-
-# Lag et datasett med Y0 (nivå på BNP per innbyggere i år 2000)
-df_gdp2000  <- df_gdp %>%  arrange(iso3c, year) %>% group_by(iso3c) %>% #Behold den første observasjonen for BNP per innbyggere (Y0)
+  mutate(year = as.numeric(year)) 
+df_gdp <- df_gdp[!duplicated(df_gdp[c("iso3c", "year", max("gdppc"))]), ]  %>%  arrange(iso3c, year)
+df_gdp2000  <- df_gdp %>%  arrange(iso3c, year) %>% group_by(iso3c) %>% 
   slice(1) %>%
   ungroup()
-df_gdp2000 = subset(df_gdp2000, select = -c(year) ) # Slett unødvendige variabler
-df_gdp2000 <-   plyr:: rename(df_gdp2000,c("gdppc" = "gdppc0")) # Gi variabeln et nytt navn slik at vi kan identifisere den i datasetet. 
+df_gdp2000 = subset(df_gdp2000, select = -c(year) ) 
+df_gdp2000 <-   plyr:: rename(df_gdp2000,c("gdppc" = "gdppc0")) 
 
-df_gdp <- left_join(df_gdp,df_gdp2000, by=c("country", "iso2c", "iso3c", "region", "income")) # Sett sammen data for BNP per innbygger alle år, med BNP per innbygger år 2000.
+df_gdp <- left_join(df_gdp,df_gdp2000, by=c("country", "iso2c", "iso3c", "region", "income")) 
 ```
 
 ```{r Humankapital, warning=FALSE, include=FALSE}
-#Gjennomsnittlig antall år i skole blant befolkningen eldre enn 15 år). WDI-variabel = BAR.SCHL.15UP 
 df_educ0<-WDI(
   country = "all",
   indicator = c('educ'="BAR.SCHL.15UP"),  
@@ -155,22 +166,21 @@ df_educ0<-WDI(
   language = "en"
 )
 
-df_educ <- subset(df_educ0, select = c(country, region, income, iso2c, iso3c, year, educ) ) %>%  arrange(iso3c, year) #Behold nødvendige variabler
-df_educ <- df_educ[complete.cases(df_educ$educ),] %>%  arrange(iso3c, year) # Slett observasjoner med manglende data
+df_educ <- subset(df_educ0, select = c(country, region, income, iso2c, iso3c, year, educ) ) %>%  arrange(iso3c, year) 
+df_educ <- df_educ[complete.cases(df_educ$educ),] %>%  arrange(iso3c, year) 
 
 df_educ = df_educ %>%  
-  arrange(iso3c, year) %>%  # Sorter etter Iso-kode og år. 
-  mutate(educ = as.numeric(educ, na.rm = TRUE)) %>% # Se til at variabelen er numerisk
+  arrange(iso3c, year) %>%  
+  mutate(educ = as.numeric(educ, na.rm = TRUE)) %>% 
   ddply("iso3c",transform,
-        avg_educ=mean(educ, na.rm = TRUE))  # Beregne gjennomsnittlig år i skole for tidsperioden 2000 - 2019 for hvert land, basert på tilgjenglig data (vil være 2000.2005,2010)
+        avg_educ=mean(educ, na.rm = TRUE)) 
 
-df_educ <- subset(df_educ, select = c(country, region, income, iso2c, iso3c, avg_educ)) # Her tar jeg vekk variabelen "year". Jeg gjør dette fordi vi bare har en observasjon på utdanning per land. Vi ønsker å bruke denne verdi for alle år. 
-df_educ <- df_educ[!duplicated(df_educ[c("iso3c")]), ]  %>%  arrange(iso3c) # Ta vekk duplikater for hvert land.
-
+df_educ <- subset(df_educ, select = c(country, region, income, iso2c, iso3c, avg_educ))  
+df_educ <- df_educ[!duplicated(df_educ[c("iso3c")]), ]  %>%  arrange(iso3c) 
 ```
 
 ```{r Sparing, warning=FALSE, include=FALSE}
-#Gjennomsnittlig sparing for perioden 2000-2015 (lagg fordi det kan ta litt tid for sparing å bli til investering)
+
 df_nsy0<-WDI(
   country = "all",
   indicator = c( 'nsy'="NY.ADJ.NNAT.GN.ZS"),  
@@ -182,14 +192,14 @@ df_nsy0<-WDI(
   language = "en"
 )
 
-df_nsy <- subset(df_nsy0, select = c(country, region, income, iso2c, iso3c, year, nsy) ) %>%  arrange(iso3c, year) #Behold nødvendige variabler
-df_nsy <- df_nsy[complete.cases(df_nsy$nsy),] %>%  arrange(iso3c, year) # Slett observasjoner med manglende data
+df_nsy <- subset(df_nsy0, select = c(country, region, income, iso2c, iso3c, year, nsy) ) %>%  arrange(iso3c, year) 
+df_nsy <- df_nsy[complete.cases(df_nsy$nsy),] %>%  arrange(iso3c, year)
 ```
 
 ```{r Vekst i arbeidskraft, warning=FALSE, include=FALSE}
 df_lf0<-WDI(
   country = "all",
-  indicator = c('lf'="JI.TLF.TOTL"),  # lf = labor force
+  indicator = c('lf'="JI.TLF.TOTL"), 
   start = 2000,
   end = 2019,
   extra = TRUE, 
@@ -198,58 +208,53 @@ df_lf0<-WDI(
   language = "en"
 )
 
-df_lf <- subset(df_lf0, select = c(country, region, income, iso2c, year, lf) ) %>%  arrange(iso2c, year) # velg ut relevante variabler
-df_lf <-   plyr:: rename(df_lf,c("iso2c" = "iso3c")) # variabelen som identifiserer land med kode er feil i datasetet. Dette korrigerer dette
+df_lf <- subset(df_lf0, select = c(country, region, income, iso2c, year, lf) ) %>%  arrange(iso2c, year)
+df_lf <-   plyr:: rename(df_lf,c("iso2c" = "iso3c")) 
 df_lf [df_lf == 0]<-NA
-df_lf <- df_lf[complete.cases(df_lf$iso3c, df_lf$lf),] # Ta vekk observasjoner som mangler data på lf og iso3c. 
+df_lf <- df_lf[complete.cases(df_lf$iso3c, df_lf$lf),] 
 df_lf = df_lf  %>%  
-  mutate(year = as.numeric(year)) # Se til at year er en numerisk variabel. 
+  mutate(year = as.numeric(year)) 
 
-df_lf <- df_lf[!duplicated(df_lf[c("iso3c", "year")]), ]  %>%  arrange(iso3c, year) # Ta vekk duplikater for land og år
+df_lf <- df_lf[!duplicated(df_lf[c("iso3c", "year")]), ]  %>%  arrange(iso3c, year) 
 
-# Ta fram vekstraten i arbeidskraften (n). Vi har ikke data for hvert år i alle land. 
-# For å beregne gjennomsnittlig årlig vekst må vi lage en variabel som måler antallet tidsperioder mellom hver observasjon.
+
 df_n = df_lf %>%  
-  arrange(iso3c, year) %>%  # Sorter på år og land
+  arrange(iso3c, year) %>% 
   ddply("iso3c",transform,
         t=c(NA,diff(year)),
-        lf_growth=c(NA,diff(log(lf)))) #Vekstrate uten hensyn til tidsintervall
+        lf_growth=c(NA,diff(log(lf)))) 
 
-df_n <- df_n[complete.cases(df_n$t, df_n$lf_growth),] # Ta vekk observasjoner som mangler data på t
+df_n <- df_n[complete.cases(df_n$t, df_n$lf_growth),] 
 
-#Nå kan vi ta fram årlig vekstrate
 df_n = df_n %>%  
   mutate(t = as.numeric(t)) %>%   
   mutate(lf_growth = as.numeric(lf_growth))
 df_n <- transform(df_n, n =lf_growth/t)
 
-# gjennomsnittlig vekstrate i arbeidskraften for hvert land
 df_n <- df_n %>% # 
   ddply("iso3c",transform,
-        avg_n=mean(n, na.rm = TRUE)) #Gjennomsnittlig årlig vekstrate i arbeidskraften
+        avg_n=mean(n, na.rm = TRUE))
 
 df_n <- subset(df_n, select = c(iso3c, avg_n) )
-df_n <- df_n[!duplicated(df_n["iso3c"]), ]  %>%  arrange(iso3c) # Ta vekk duplikater for land
+df_n <- df_n[!duplicated(df_n["iso3c"]), ]  %>%  arrange(iso3c) 
 df_nsy = df_nsy %>%  
-  arrange(iso3c, year) %>%  # Sorter etter Iso-kode og år. 
-  mutate(nsy = as.numeric(nsy, na.rm = TRUE)) %>% # Se til at variabelen er numerisk
+  arrange(iso3c, year) %>% 
+  mutate(nsy = as.numeric(nsy, na.rm = TRUE)) %>%
   ddply("iso3c",transform,
-        avg_nsy=mean(nsy, na.rm = TRUE))  # Beregne gjennomsnittlig år i skole for tidsperioden 2000 - 2019 for hvert land, basert på tilgjenglig data (vil være 2000.2005,2010)
+        avg_nsy=mean(nsy, na.rm = TRUE))
 
-df_nsy <- subset(df_nsy, select = c(country, region, income, iso2c, iso3c, avg_nsy)) # Her tar jeg vekk variabelen "year". Jeg gjør dette fordi vi bare har en observasjon på utdanning per land. Vi ønsker å bruke denne verdi for alle år. 
-df_nsy <- df_nsy[!duplicated(df_nsy[c("iso3c")]), ]  %>%  arrange(iso3c) # Ta vekk duplikater for hvert land.
+df_nsy <- subset(df_nsy, select = c(country, region, income, iso2c, iso3c, avg_nsy)) 
+df_nsy <- df_nsy[!duplicated(df_nsy[c("iso3c")]), ]  %>%  arrange(iso3c)
 
 ```
 
 ```{r Felles datasett, warning=FALSE, include=FALSE}
-#BNP data, utdanningsdata, sparing, og arbeidskraftsdata
-
 df <- left_join(df_gdp, df_educ, by=c("country", "iso2c", "iso3c", "region", "income"))
 df <- left_join(df, df_nsy, by=c("country", "iso2c", "iso3c", "region", "income"))
 df <- left_join(df, df_n, by="iso3c")
-df <- subset(df, select = c(country, region, income, iso2c, iso3c, year, gdppc, gdppc0, avg_educ, avg_nsy, avg_n)) # Behold nødvendige variabler
+df <- subset(df, select = c(country, region, income, iso2c, iso3c, year, gdppc, gdppc0, avg_educ, avg_nsy, avg_n))
 
-# Mange observasjoner representerer aggregerte regioner. Vi ønsker å ta vekk disse. Det finnes helt sikkert en bedre måte å gjøre dette på. Dette er den måten jeg kom på.
+
 df <- df  %>%  filter(iso2c!='1A' & iso2c !='1W' & iso2c != '4E' & iso2c != '7E' & iso2c !='8S'
                       & iso2c !='B8' & iso2c !='EU' & iso2c !='F1' & iso2c !='OE' & iso2c !='S1' & iso2c !='S2' & iso2c !="S3" 
                       & iso2c !='S4' & iso2c !='T2' & iso2c !='T3' & iso2c !='T4' & iso2c !='T5' & iso2c !='T6' & iso2c !='T7' 
@@ -258,7 +263,6 @@ df <- df  %>%  filter(iso2c!='1A' & iso2c !='1W' & iso2c != '4E' & iso2c != '7E'
                       & iso2c !='XN' & iso2c !='XO' & iso2c !='XP' & iso2c !='XQ' & iso2c !='XT' & iso2c !='XU' & iso2c !='Z4' 
                       & iso2c !='Z7' & iso2c !='ZF'& iso2c !='ZG'  & iso2c !='ZH' & iso2c !='ZI'  & iso2c !='ZJ'  & iso2c !='ZQ'  
                       & iso2c !='ZT'  & iso2c !='Z7')  %>% arrange(iso3c, year) 
-
 ```
 
 ```{r Resterende variabler, warning=FALSE, include=FALSE}
@@ -277,7 +281,6 @@ df_rest0 <- df_rest0 %>% mutate_at(c('iso3c'), ~na_if(., ''))
 df_rest <- df_rest0[complete.cases( df_rest0$iso3c),]  %>%  arrange(iso2c) 
 
 
-# Ta vekk observasjoner som ikke representerer land.
 df_rest <- df_rest  %>%  filter(iso2c!='1A' & iso2c !='1W' & iso2c != '4E' & iso2c != '7E' & iso2c !='8S'
                                 & iso2c !='B8' & iso2c !='EU' & iso2c !='F1' & iso2c !='OE' & iso2c !='S1' & iso2c !='S2' & iso2c !="S3" 
                                 & iso2c !='S4' & iso2c !='T2' & iso2c !='T3' & iso2c !='T4' & iso2c !='T5' & iso2c !='T6' & iso2c !='T7' 
@@ -290,35 +293,32 @@ df_rest <- df_rest  %>%  filter(iso2c!='1A' & iso2c !='1W' & iso2c != '4E' & iso
 df_rest <- subset(df_rest, select = c("country", "region", "income", "iso3c", "iso2c", "year", "poptot", "p", "nry", "gi", "gx"))
 df_all <- left_join(df, df_rest, by=c("country", "region", "income", "iso2c", "iso3c", "year"))
 
-# Lag en rekkefølge til variablene slik at det er enklere å få en oversikt over datamaterialet.
 col_order <- c("country",  "region", "income", "iso3c", "iso2c", "year", "gdppc", "gdppc0", "poptot", "p", "avg_n", "avg_nsy", "nry", "gi", "gx", "avg_educ")
 df_all <- df_all[, col_order]
 ```
 
 ```{r Vekstrate og snitt, warning=FALSE, include=FALSE}
-# Ta fram vekstraten og gjennomsnitt for resterende variabler
 df_growth0 = df_all %>%  
-  arrange(iso3c, year) %>%  # Sorter på år og land
+  arrange(iso3c, year) %>%
   ddply("iso3c",transform,
-        gdpgrowth=c(NA,diff(log(gdppc)))*100) %>%   # Årlig vekstrate i gdppc for hvert land
+        gdpgrowth=c(NA,diff(log(gdppc)))*100) %>%
   mutate(gdpgrowth = as.numeric(gdpgrowth, na.rm = TRUE)) %>% # 
   ddply("iso3c",transform,
-        avg_gdpgrowth=mean(gdpgrowth, na.rm = TRUE), #Gjennomsnittlig årlig vekstrate i BNP per innbygger for hvert land i perioden
-        avg_gi=mean(gi, na.rm = TRUE), # Gjennomsnittlig årlig vekstrate i investeringer for hvert land  i perioden
-        avg_nry=mean(nry, na.rm = TRUE),  # Gjennomsnittlig årlig vekstrate (negativ) i naturressurser for hvert land  i perioden
-        avg_gx=mean(gx, na.rm = TRUE),  # Gjennomsnittlig årlig vekstrate i eksport for hvert land  i perioden
-        avg_p=mean(p, na.rm = TRUE))  # Gjennomsnittlig årlig vekstrate i befolkningen for hvert land  i perioden
+        avg_gdpgrowth=mean(gdpgrowth, na.rm = TRUE),
+        avg_gi=mean(gi, na.rm = TRUE),
+        avg_nry=mean(nry, na.rm = TRUE),
+        avg_gx=mean(gx, na.rm = TRUE),
+        avg_p=mean(p, na.rm = TRUE))
 
-#View(df_growth0)
+
 df_growth0 <-  df_growth0 %>% mutate_at(c('iso3c'), ~na_if(., ''))
-df_growth <- df_growth0[complete.cases( df_growth0$country, df_growth0$income, df_growth0$iso3c, df_growth0$avg_gdpgrowth, df_growth0$gdppc0, df_growth0$avg_n, df_growth0$avg_p, df_growth0$avg_nsy, df_growth0$avg_nry,df_growth0$avg_gi, df_growth0$avg_gx, df_growth0$avg_educ),] # Ta vekk land som mangler data 
+df_growth <- df_growth0[complete.cases( df_growth0$country, df_growth0$income, df_growth0$iso3c, df_growth0$avg_gdpgrowth, df_growth0$gdppc0, df_growth0$avg_n, df_growth0$avg_p, df_growth0$avg_nsy, df_growth0$avg_nry,df_growth0$avg_gi, df_growth0$avg_gx, df_growth0$avg_educ),]
 
 
 df_growth <- subset(df_growth, select = c("country",  "region", "income", "iso3c", "iso2c","year", "poptot", "gdppc", "gdppc0", "avg_gdpgrowth", "avg_n", "avg_p", "avg_nsy", "avg_nry", "avg_gi", "avg_gx", "avg_educ"))
 
-# Lage datasettet du vil bruke til analysen din
 df_growth2019  <- df_growth %>%  arrange(iso3c, year) %>% group_by(iso3c) %>% 
-  slice(n()) %>% # Behold den SISTE observasjonen for hvert land
+  slice(n()) %>%
   ungroup()
 ```
 
@@ -338,7 +338,6 @@ dim(no_outliers)
 ```
 
 ```{r Log(BNP/innbygger, warning=FALSE, include=FALSE}
-# Lag en variabel som er logaritmen av BNP per innbygger (enklere tolkning og presser sammen fordelingen)
 no_outliers$dppc <-as.numeric(no_outliers$gdppc)
 no_outliers$ln_gdppc<-log(no_outliers$gdppc) 
 no_outliers$ln_gdppc0<-log(no_outliers$gdppc0)
@@ -358,216 +357,240 @@ I resultatdelen blir det gjennomført en analyse av mange ulike variabler, og p�
 
 Den avhengige variabelen i analysen er vekstraten i BNP per innbygger, mens de forklarende variablene blir sammenlignet ved bruk av minste-kvadrat-metoden (OLS). Ligningen som benyttes i minste-kvadrat-metoden er $y=\beta_0+\beta_1x...+\in$, hvor $y$ er den avhengige variabelen, $\beta_0$ er skjæringspunktet med y-aksen, $\beta_1$ er helning på funksjonen og $\in$ er et feilledd som skal ta hensyn til at det kan være andre faktorer som påvirker variablene. Antallet $\beta$ ledd, eller forklarende ledd avhenger av hvor mange forklarende variabler som en ønsker å se på samtidig.
 
+OLS metoden gir to verdier som er av interesse, den ene er en verdien for helningen som sier noe om hvor mye en uavhengig variabel påvirker den avhengige. Den andre verdien er p-verdien. P-verdien forteller noe om signifikansnivået på testen eller graden av sikkerhet. Dette blir forklart i *kapittel 4.2.*
+
+I tillegg er det verdier for $R^2$ og justert $R^2$ som viser til hvor stor påvirkning de forklarende variablene har på den avhengige variabelen.
+
 ## 4. Resultat
 
-I resultatdelen blir dataene bearbeidet for å visualisere økonomisk vekst over tid i de 91 landene. Den visualiseringen som gjøres er både grafisk og statistisk, slik at alle faktorer er tatt hensyn til.
+I resultatdelen blir dataene bearbeidet for å visualisere økonomisk vekst over tid i de landene som er valgt ut. Det er totalt 98 land som har tilgjengelig data for alle variabler. Det er også fjernet 7 land som klassifiseres som ekstreme observasjoner (outliers). Det gjør at alle resultater er presentert fra en oversikt over 91 land.
+
+Denne visualiseringen er grafisk i form av tabeller og grafer, samt statistisk testet ved bruk av OLS metoden nevnt i *kapittel 3.2*.
 
 ### 4.1 Deskriptiv statistikk
 
 ```{r Tabel1, echo=FALSE, warning=FALSE}
-# Velg ut de variabler du vil ha med i tabellen. Her er et eksempel (du skal ta med alle variabler som du har med i den empiriske analysen)
 df <- subset(no_outliers, select = c("avg_gdpgrowth", "avg_p", "avg_nsy", "avg_educ", "avg_nry", "avg_gi", "avg_n", "avg_gx", "ln_gdppc"))
-# Gi beskrivende navn til variablene (i samme rekkefølge som de ligger i datasettet)
+
 labs <- c("Årlig vekstrate i BNP", "Årlig befolkningsvekst", "Netto-sparing (andel av BNI)", "Antall år i skole (befolkning 15+", "Reduksjonsrate i naturressurser", "Vekstrate i investeringer", "Vekstrate i arbeidskraft", "Vekstrate i eksport", "BNP per innbygger (log)") 
 
-# Lag tabellen
 st(df, out = 'kable', title = 'Deskriptiv statistikk', labels=labs,
    summ = list(
-     c('notNA(x)','mean(x)','sd(x)','min(x)','max(x)'), # Beskriv hvilken statistikk du ønsker å vise
+     c('notNA(x)','mean(x)','sd(x)','min(x)','max(x)'),
      c('notNA(x)','mean(x)')
    ),
    summ.names = list(
-     c('N','Gjennomsnitt','SD','Min','Maks') # Gi navn til kollnene
+     c('N','Gjennomsnitt','SD','Min','Maks')
    ))
 ```
 
-Som vi ser fra tabellen over er det hentet ut info om utviklingen i forskjellige endogene verdier. Tabellen viser verdier for vekstrate i BNP, befolkningsvekst, netto-sparing, antall år i skole, reduksjonsrate i naturressurser, vekst i investeringer, vekst i arbeidskraft, vekst i eksport og BNP per innbygger på log form. Tabellen viser verdier for antall, gjennomsnitt, standardavvik, laveste verdi og største verdi. Tabellen sier ikke så mye i seg selv, men den gir en oversikt over hvordan dataene ser ut.
+Som vi ser fra tabellen over er det hentet ut info om observasjonene i de forskjellige landene. Tabellen viser verdier for antall, gjennomsnitt, standardavvik, laveste verdi og høyeste verdi for ulike endogene og eksogene variabler: vekstrate i BNP, befolkningsvekst, netto-sparing, antall år i skole, reduksjonsrate i naturressurser, vekst i investeringer, vekst i arbeidskraft, vekst i eksport og BNP per innbygger på log form. Tabellen sier ikke så mye i seg selv, men den gir en oversikt over hvordan dataene ser ut i tillegg til å gi en indikator på hvilket spekter de ulike verdiene er.
 
-```{r BNP(log) og sparing, echo=FALSE, warning=FALSE}
+```{r BNP(log) og sparing, echo=FALSE, message=FALSE, warning=FALSE, out.width="400px", out.height="400px"}
 plot1 <- ggplot(no_outliers, aes(x = avg_nsy , y = ln_gdppc, na.rm = TRUE)) +
-  xlab("Sparing som andel av BNI (Netto)") + # Beskrivelse for x-akselen
-  ylab("BNP per innbygger 2019") + # Beskrivelse for y-akselen
-  theme_minimal(base_size = 14) + # Tekststørrelse og font
-  geom_point(aes(size = poptot, color = region), alpha = 0.8) + # Størrelse (farge) på bobblene avhenger befolkningsstørrelse (region)
+  xlab("Sparing som andel av BNI (Netto)") + 
+  ylab("BNP/innbygger 2019") + 
+  theme_minimal(base_size = 14) + 
+  geom_point(aes(size = poptot, color = region), alpha = 0.8) + 
   
-  scale_size_area(guide = "none", max_size = 14) + #Ta vekk legend for befolkningsstørrelse
-  theme(legend.text = element_text(size = 8,color="black"),
+  scale_size_area(guide = "none", max_size = 14) +
+  theme(legend.text = element_text(size = 5,color="black"),
         legend.title = element_blank(),
         legend.key.height = unit(.3, 'cm'),
-        legend.key.width = unit(.3, 'cm'))+  # Bestem font-størrelse på legend
-  scale_colour_manual(values = rainbow(9)) +# Velg farger til bobblene
+        legend.key.width = unit(.3, 'cm'))+ 
+  scale_colour_manual(values = rainbow(9)) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_rect(fill = 'white'))+
   labs(title = "Figur 1: BNP/innbygger og sparing") + 
-  scale_y_continuous(trans = 'log2', labels = dollar, breaks=c(500, 2000, 8000, 32000, 120000)) + # logaritmere BNP pc og velg hvilke "ticks" som skal vises
-  scale_x_continuous(breaks=c(-7.5,-5,-2.5,0,2.5,5,7.5,10,12.5,15,17.5,20,22.5,25,27.5)) # Velg vilke "ticks" som skal vises på x-akselen
+  scale_y_continuous(trans = 'log2', labels = dollar, breaks=c(500, 2000, 8000, 32000, 120000)) + 
+  scale_x_continuous(breaks=c(-5,0,5,10,15,20,25))+
+  geom_smooth(method = "lm", se = FALSE, colour = "black")
 plot1
 ```
 
-Grafen viser sammenhengen mellom BNP per innbygger (log) og sparing som andel av BNI (netto). Fra grafen er det vanskelig å dra noen direkte konklusjon eller si at det er en korrelasjon mellom de to variablene. En kan derimot observere at land i "Sub-Saharan Africa" har lavere nivå på BNP per innbygger mens "Europe & Central Asia" har høyere nivå på BNP per innbygger.
-
-```{r BNP(log) og befolkningsvekst, echo=FALSE, warning=FALSE}
+```{r BNP(log) og befolkningsvekst, echo=FALSE, message=FALSE, warning=FALSE, out.width="400px", out.height="400px"}
 plot2 <- ggplot(no_outliers, aes(x = avg_p , y = ln_gdppc, na.rm = TRUE)) +
-  xlab("Befolkningsvekst") + # Beskrivelse for x-akselen
-  ylab("BNP per innbygger 2019") + # Beskrivelse for y-akselen
-  theme_minimal(base_size = 14) + # Tekststørrelse og font
-  geom_point(aes(size = poptot, color = region), alpha = 0.8) + # Størrelse (farge) på bobblene avhenger befolkningsstørrelse (region)
-  scale_size_area(guide = "none", max_size = 14) + #Ta vekk legend for befolkningsstørrelse
-  theme(legend.text = element_text(size = 8,color="black"),
+  xlab("Befolkningsvekst") + 
+  ylab("BNP/innbygger 2019") +
+  theme_minimal(base_size = 14) + 
+  geom_point(aes(size = poptot, color = region), alpha = 0.8) + 
+  scale_size_area(guide = "none", max_size = 14) + 
+  theme(legend.text = element_text(size = 5,color="black"),
         legend.title = element_blank(),
         legend.key.height = unit(.3, 'cm'),
-        legend.key.width = unit(.3, 'cm'))+  # Bestem font-størrelse på legend
-  scale_colour_manual(values = rainbow(9)) +# Velg farger til bobblene
+        legend.key.width = unit(.3, 'cm'))+  
+  scale_colour_manual(values = rainbow(9)) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_rect(fill = 'white'))+
   labs(title = "Figur 2: BNP/innbygger og befolkningsvekst") + 
-  scale_y_continuous(trans = 'log2', labels = dollar, breaks=c(500, 2000, 8000, 32000, 120000)) + # logaritmere BNP pc og velg hvilke "ticks" som skal vises
-  scale_x_continuous(breaks=c(-1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5 )) # Velg vilke "ticks" som skal vises på x-akselen
+  scale_y_continuous(trans = 'log2', labels = dollar, breaks=c(500, 2000, 8000, 32000, 120000)) + 
+  scale_x_continuous(breaks=c(-1, 0, 1, 2, 3, 4, 5 )) +
+  geom_smooth(method = "lm", se = FALSE, colour = "black")
 plot2
 ```
 
-Den neste grafen viser sammenhengen mellom BNP per innbygger (log) og befolkningsvekst. Samme sitasjon som grafen over, kan ikke dra noen konkret korrelasjon, blå land har lav BNP, oransje har høyere BNP. Ser ut til at grafen har en negativ helning. Det vil si at land som har en høy befolkningsvekst har lav BNP per innbygger og land med lav befolkningsvekst har høy BNP per innbygger. Om dette er en konkret sammenheng kan derimot ikke bekreftes.
-
-```{r BNP(log) og humankapital, echo=FALSE, warning=FALSE}
+```{r BNP(log) og humankapital, echo=FALSE, message=FALSE, warning=FALSE, out.height="400px", out.width="400px"}
 plot3 <- ggplot(no_outliers, aes(x = avg_educ , y = ln_gdppc, na.rm = TRUE)) +
-  xlab("Humankapital, utdanning") + # Beskrivelse for x-akselen
-  ylab("BNP per innbygger 2019") + # Beskrivelse for y-akselen
-  theme_minimal(base_size = 14) + # Tekststørrelse og font
-  geom_point(aes(size = poptot, color = region), alpha = 0.8) + # Størrelse (farge) på bobblene avhenger befolkningsstørrelse (region)
-  scale_size_area(guide = "none", max_size = 14) + #Ta vekk legend for befolkningsstørrelse
- theme(legend.text = element_text(size = 8,color="black"),
+  xlab("Humankapital, utdanning") + 
+  ylab("BNP/innbygger 2019") + 
+  theme_minimal(base_size = 14) + 
+  geom_point(aes(size = poptot, color = region), alpha = 0.8) + 
+  scale_size_area(guide = "none", max_size = 14) + 
+ theme(legend.text = element_text(size = 5,color="black"),
         legend.title = element_blank(),
         legend.key.height = unit(.3, 'cm'),
-        legend.key.width = unit(.3, 'cm'))+  # Bestem font-størrelse på legend
-  scale_colour_manual(values = rainbow(9)) +# Velg farger til bobblene
+        legend.key.width = unit(.3, 'cm'))+  
+  scale_colour_manual(values = rainbow(9)) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_rect(fill = 'white'))+
   labs(title = "Figur 3: BNP/innbygger og humankapital") + 
-  scale_y_continuous(trans = 'log2', labels = dollar, breaks=c(500, 2000, 8000, 32000, 120000)) + # logaritmere BNP pc og velg hvilke "ticks" som skal vises
-  scale_x_continuous(breaks=c(0,2.5,5,7.5,10,12.5,15)) # Velg vilke "ticks" som skal vises på x-akselen
+  scale_y_continuous(trans = 'log2', labels = dollar, breaks=c(500, 2000, 8000, 32000, 120000)) + 
+  scale_x_continuous(breaks=c(0,2.5,5,7.5,10,12.5,15))+
+  geom_smooth(method = "lm", se = FALSE, colour = "black")
 plot3
 ```
 
-Figur 3 viser igjen BNP per innbygger (log) på y-aksen mens på x-aksen er det humankapital, målt i antall år i skole. Figur 3 ser ut til å ha positiv helning, hvor land med bedre humankapital også har høyere BNP per innbygger. Om det er en direkte korrelasjon og om det er statistisk sammenheng kan ikke tydes fra grafen derimot.
+Figurene 1, 2 og 3 viser sammenhengen mellom BNP per innbygger (log) i 2019 og de tre forklarende variablene sparing, befolkningsvekst og humankapital. Alle tre figurene viser at nivået på BNP per innbygger er relativt likt i flere regioner, det vil si at land i "Europe & Central Asia" har høye verdier mens land i "Sub-Saharan Africa" har lavere verdier.
 
-```{r Vekstrate BNP og sparing, echo=FALSE, warning=FALSE}
+Figur 1 viser sammenhengen mellom BNP per innbygger og sparing. Fra grafen er det vanskelig å dra noen direkte konklusjon eller si at det er en korrelasjon mellom de to variablene. Grafen har en svak negativ helning.
+
+Figur 2 viser sammenhengen mellom BNP per innbygger og befolkningsvekst. Samme resultat som figur 1, det er ikke mulig å dra noen konkret korrelasjon. Grafen har en klar negativ helning, noe som kan tyde på at land som har en høy befolkningsvekst har lavt nivå BNP per innbygger og land med lav befolkningsvekst har høyt nivå BNP per innbygger. Om dette er en konkret sammenheng kan derimot ikke bekreftes bare ved å observere grafen.
+
+Figur 3 viser igjen BNP per innbygger sammen med humankapital, hvor humankapital er målt i antall år i skole. Figur 3 har en positiv helning, hvor land med bedre humankapital også har høyere BNP per innbygger. Om det er en direkte korrelasjon og om det er statistisk sammenheng kan ikke tydes fra grafen derimot.
+
+```{r Vekstrate BNP og sparing, echo=FALSE, message=FALSE, warning=FALSE, out.width="300px", out.height="300px"}
 plot4 <- ggplot(no_outliers, aes(x = avg_nsy , y = avg_gdpgrowth, na.rm = TRUE)) +
-  xlab("Sparing som andel av BNI (Netto)") + # Beskrivelse for x-akselen
-  ylab("Vekstrate i BNP per innbygger") + # Beskrivelse for y-akselen
-  theme_minimal(base_size = 14) + # Tekststørrelse og font
-  geom_point(aes(size = poptot, color = region), alpha = 0.8) + # Størrelse (farge) på bobblene avhenger befolkningsstørrelse (region)
-  scale_size_area(guide = "none", max_size = 14) + #Ta vekk legend for befolkningsstørrelse
- theme(legend.text = element_text(size = 8,color="black"),
+  xlab("Sparing som andel av BNI (Netto)") + 
+  ylab("Vekstrate i BNP") + 
+  theme_minimal(base_size = 14) + 
+  geom_point(aes(size = poptot, color = region), alpha = 0.8) + 
+  scale_size_area(guide = "none", max_size = 14) + 
+ theme(legend.text = element_text(size = 5,color="black"),
         legend.title = element_blank(),
         legend.key.height = unit(.3, 'cm'),
-        legend.key.width = unit(.3, 'cm'))+  # Bestem font-størrelse på legend
-  scale_colour_manual(values = rainbow(9)) +# Velg farger til bobblene
+        legend.key.width = unit(.3, 'cm'))+  
+  scale_colour_manual(values = rainbow(9)) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_rect(fill = 'white'))+
   labs(title = "Figur 4: Vekstrate i BNP og sparing") +
   scale_y_continuous() +
-  scale_x_continuous(breaks=c(-7.5,-5,-2.5,0,2.5,5,7.5,10,12.5,15,17.5,20,22.5,25,27.5)) # Velg vilke "ticks" som skal vises på x-akselen
+  scale_x_continuous(breaks=c(-5,0,5,10,15,20,25))+
+  geom_smooth(method = "lm", se = FALSE, colour = "black") 
 plot4
 ```
 
-Figur 4 viser sammenhengen mellom vekstraten i BNP per innbygger og sparing. Grafen er vanskelig å tyde, det ser ikke ut til å være noen direkte korrelasjon.
-
-```{r Vekstrate BNP og humankapital, echo=FALSE, warning=FALSE}
+```{r Vekstrate BNP og humankapital, echo=FALSE, message=FALSE, warning=FALSE, out.width="300px", out.height="300px"}
 plot5 <- ggplot(no_outliers, aes(x = avg_educ , y = avg_gdpgrowth, na.rm = TRUE)) +
-  xlab("Humankapital, utdanning") + # Beskrivelse for x-akselen
-  ylab("Vekstrate i BNP per innbygger") + # Beskrivelse for y-akselen
-  theme_minimal(base_size = 14) + # Tekststørrelse og font
-  geom_point(aes(size = poptot, color = region), alpha = 0.8) + # Størrelse (farge) på bobblene avhenger befolkningsstørrelse (region)
-  scale_size_area(guide = "none", max_size = 14) + #Ta vekk legend for befolkningsstørrelse
- theme(legend.text = element_text(size = 8,color="black"),
+  xlab("Humankapital, utdanning") + 
+  ylab("Vekstrate i BNP") + 
+  theme_minimal(base_size = 14) + 
+  geom_point(aes(size = poptot, color = region), alpha = 0.8) + 
+  scale_size_area(guide = "none", max_size = 14) + 
+ theme(legend.text = element_text(size = 5,color="black"),
         legend.title = element_blank(),
         legend.key.height = unit(.3, 'cm'),
-        legend.key.width = unit(.3, 'cm'))+  # Bestem font-størrelse på legend
-  scale_colour_manual(values = rainbow(9)) +# Velg farger til bobblene
+        legend.key.width = unit(.3, 'cm'))+ 
+  scale_colour_manual(values = rainbow(9)) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_rect(fill = 'white'))+
   labs(title = "Figur 5: Vekstrate i BNP og humankapital") +
   scale_y_continuous() +
-  scale_x_continuous(breaks=c(0,2.5,5,7.5,10,12.5,15)) # Velg vilke "ticks" som skal vises på x-akselen
+  scale_x_continuous(breaks=c(0,2.5,5,7.5,10,12.5,15))+
+  geom_smooth(method = "lm", se = FALSE, colour = "black")
 plot5
 ```
 
-Figur 5 viser sammenhengen mellom vekstrate i BNP per innbygger og humankapital. Igjen, litt utfordrende å tyde om det er noen direkte sammenheng.
+Figur 4 og 5 viser sammenhengen mellom vekstraten i BNP per innbygger og de to forklarende variablene sparing og humankapital. Det er ikke enkelt å peke på noen konkrete kjennetegn ved den avhengige variabelen vekstrate i BNP.
+
+Figur 4 er utfordrende å tyde. Det ser ikke ut til å være noen direkte korrelasjon mellom vekstraten og sparing, og det er ikke noe som tilsier at land fra samme kontinent har samme utvikling. Grafen har derimot en svak positiv helning.
+
+Figur 5 er også noe utfordrende å tyde. Grafen har en negativ helning, samtidig som kontinentene er delvis gruppert sammen, med mye av Europa og Asia i samme område.
 
 ### 4.2 Økonometrisk analyse
+
+For å kunne analysere data er det nødvendig å gjennomføre en regresjonsanalyse. Denne blir gjennomført ved bruk av den statistiske utregningen forklart i *kapittel 3.2*.
+
+Før regresjonen og analysen kan gjennomføres er det nødvendig å definere nullhypotesen ($H_0$) og alternativhypotesen ($H_1$).
+
+$H_0$: Det er ingen sammenheng mellom vekstraten i BNP og forklarende variabel.
+
+$H_1$: Det er sammenheng mellom vekstraten i BNP og den forklarende variabelen.
+
+I tillegg er det viktig å påpeke at signifikansnivået på p-verdien er satt til 5% eller 0,05. Det vil si at ved p-verdi =\< 0,05 kan $H_0$ forkastes.
+
+#### Regresjonstabell 1:
 
 ```{r Linreg1, echo=FALSE, warning=FALSE}
 regression <- no_outliers %>% 
   dplyr::rename(BNP_per_innbygger = gdppc,
                 Sparing_andel_BNI = avg_nsy,
-                Befolkning = poptot,
                 Befolkningsvekstrate = avg_p,
                 Utdanning = avg_educ,
                 Investeringsvekstrate = avg_gi,
                 Eksportvekstrate = avg_gx,
                 Reduksjonsrate_i_naturressurser = avg_nry,
-                BNP_per_innbygger_log = ln_gdppc)
+                BNP_per_innbygger_log = ln_gdppc,
+                Vekstrate_i_BNP = avg_gdpgrowth)
 
-model1 <- lm(BNP_per_innbygger_log  ~ Sparing_andel_BNI + Investeringsvekstrate, data= regression)
+model1 <- lm(Vekstrate_i_BNP  ~ Sparing_andel_BNI + Investeringsvekstrate + Reduksjonsrate_i_naturressurser, data= regression)
 #tab_model(model1, CSS = css_theme("cells"))
 knitr::include_graphics("Model1.png")
 ```
 
-Regresjonen over viser sammenhengen mellom utvalgte forklarende variabler og verdien på BNP per innbygger i log format.
+Regresjonstabell 1 viser sammenhengen mellom de forklarende variabler sparing, vekstrate i spring og reduksjon i naturressurser sammen med vekstrate i BNP.
 
-Før regresjonen og analysen kan gjennomføres er det nødvendig å definere nullhypotese: $H_0$ og alternativhypotese: $H_1$:
+Den første forklarende variabelen er sparing som andel av BNI eller spareraten. Den har en liten positiv påvirkning på BNP, 0,04, men en p-verdi på 0,078. Dette er noe høyere enn bestemt signifikansnivå, så $H_0$ beholdes. En kan ikke konkludere med at det er ett klart sammenheng mellom vekst i BNP og sparing fra vår data. Det skal sies derimot at en p-verdi mellom 5% og 10% er fortsatt en positiv korrelasjon som vil si at sparing har en påvirkning på vekst i BNP men vår data klarer ikke å bevise det med nok sikkerhet.
 
-$H_0$: Det er ingen sammenheng mellom nivå på BNP per innbygger og forklarende variabel.
+Neste forklarende variabel er årlig vekstrate i investeringer, eller endring i spareraten. Den har en positivt påvirkning på BNP, 0,28, med en signifikant p-verdi, \<0,001. Det betyr at nullhypotesen forkastes og at vekstraten i BNP påvirkes av vekstraten i investeringer. Med andre ord, en økning i vekstraten i investeringer har en positvit innvirkning på vekstraten i BNP.
 
-$H_1$: Det er sammenheng mellom BNP per innbygger og forklarende variabel.
+Siste forklarende variabel fra denne tabellen er reduksjonsrate i naturressurser. Denne variabelen har en negativ påvirkning på vekst i BNP, -0,13 og en signifikant p-verdi, \<0,001. Det betyr igjen at nullhypotesen forkastes og en kan konkludere med at vekstraten i BNP reduseres som følge av at mengden naturressurser som benyttes økes.
 
-Den første forklarende variabelen er sparing som andel av BNI. Den har en liten negativ påvirkning på BNP, -0,00, men en ikke signifikant p-verdi. Det vil si at nullhypotesen beholdes og en kan ikke konkludere med at det er ett sammenheng mellom BNP og sparing fra vår data.
+Det siste å trekke ut av denne tabellen er at det er en lav $R^2$ og justert $R^2$. Disse verdiene er på 0,325 og 0,302, noe som betyr at disse tre verdiene kun forklarer rundt 30% av utvikling i BNP per innbygger. Det vil si at det er manglende forklaringsvariabler for omtrent 70% av vekst i BNP. Det betyr at ifølge dette datasettet er det noen andre variabler som har stor påvirkning på utviklingen.
 
-Neste forklarende variabel er årlig vekstrate i investeringer. Den har en liten negativ påvirkning på BNP, -0,16, men en p-verdi som er signifikant. Det betyr at nullhypotesen forkastes og at nivået på BNP påvirkes av vekstraten i investeringer.
-
-Denne tabellen har lav $R^2$, noe som betyr at disse to verdiene kun forklarer rundt 25% av utvikling i BNP per innbygger.
+#### Regresjonstabell 2:
 
 ```{r Lingre2, echo=FALSE, warning=FALSE}
-model2 <- lm(BNP_per_innbygger_log ~ Befolkningsvekstrate + Utdanning +  Eksportvekstrate, data = regression)
+model2 <- lm(Vekstrate_i_BNP ~ Befolkningsvekstrate + Utdanning +  Eksportvekstrate, data = regression)
 #tab_model(model2, CSS = css_theme("cells"))
 knitr::include_graphics("Model2.png")
 ```
 
-Neste tabell starter med forklarende variabel befolkningsvekstrate. Denne har en liten negativ påvirkning på BNP, -0,14, og p-verdien er signifikant. Nullhypotesen forkastes. Dette betyr at en økning i befolkningsvekstrate har en negativ effekt på BNP per innbygger. Altså at ved en økning i hvor mange mennesker som fødes per år vil verdien på BNP per innbygger falle.
+Regresjonstabell 2 viser igjen vekstrate i BNP men denne gangen hvordan sammenheng det har med de forklarende variablene befolkningsvekst, humankapital (utdanning) og eksportvekstrate.
 
-Neste forklarende variabel utdanning. Utdanning har en positivt påvirkning på BNP, 0,29, og en signifikant p-verdi. Nullhypotesen kan dermed forkastes, utdanning har en påvirkning på BNP per innbygger. Det vil si at for hvert ekstra år med utdanning i snitt så øker BNP per innbygger med en verdi på 0,29
+Første forklarende variabel er befolkningsvekstrate. Denne har en negativ påvirkning på vekstrate i BNP, -0,63, og p-verdien er igjen signifikant, \<0,001. Nullhypotesen kan igjen forkastes og en kan dra konklusjon om at en økning i befolkningsvekstrate har en negativ effekt på BNP per innbygger. Altså at ved en økning i hvor mange mennesker som fødes per år vil veksten i BNP reduseres.
 
-Siste forklarende variabel er eksportvekstrate. Den har ingen påvirkning samtidig som det er en veldig høy p-verdi. Den påvirker altså ikke BNP i det hele tatt.
+Neste forklarende variabel er humankapital, i dette datasettet, utdanning. Utdanning har en negativ påvirkning på vekst i BNP, -0,13, og en signifikant p-verdi, 0,033. Nullhypotesen kan dermed forkastes, utdanning har en påvirkning på BNP per innbygger. Det vil si at for hvert ekstra år med utdanning i snitt så reduseres veksten i BNP med en verdi på 0,13.
 
-$R^2$ er større i modell 2 enn i 1. De forklarende variablene i tabellen er bedre indikatorer på hva som påvirker utviklingen i BNP per innbygger.
+Siste forklarende variabel er eksportvekstrate. Eksportvekstraten har en positivt påvirkning, 0,32, med en signifikant p-verdi, \<0.001. Den har ingen påvirkning samtidig som det er en veldig høy p-verdi. Den påvirker altså ikke BNP i det hele tatt.
+
+$R^2$ er på 75%. De forklarende variablene i tabellen er gode indikatorer på hva som påvirker utviklingen i BNP per innbygger.
 
 ```{r LingregStor, echo=FALSE, warning=FALSE}
 #tab_model(model1, model2, CSS = css_theme("cells"))
 knitr::include_graphics("Model3.png")
 ```
 
+For å kunne se på alle verdiene sammen blir de kombinert sammen til en felles tabell. Tabellen over viser hvordan nivået på BNP per innbygger i 2019 (log) påvirkes av de ulike forklarende variablene.
+
+Ved å sette tabellene i lag kan en enkelt se på forskjellene. Den tydeligste forskjellen er verdien på $R^2$ og adjusted- $R^2$. De tre variablene befolkningsvekstrate, utdanning og eksportvekstrate forklarer 75% av utviklingen i BNP per innbygger. Det er nesten tre ganger så mye som de tre variablene sparing, investeringsvekstrate og reduksjonsrate i ressurser.
+
 ## 5. Diskusjon
 
-I diskusjonen skal du tolke og diskutere dine resultater. I diskusjonen skal du besvare følgende spørsmål: Støtter resultatene prediksjonene fra Solow-modellen? Hva betyr resultatene? Hvilke konklusjoner kan vi dra fra den empiriske analysen? Finnes det noen problemer med analysen eller datamaterialet som fører til at vi kanskje ikke burde dra for sterke konklusjoner?
+Målet med denne rapporten er å finne ut hvordan økonomisk vekst kan oppstå. Det vil si at formålet har vært å finne ut hvilke variabler påvirker BNP per innbygger og vekstraten i BNP. Fra teorien i *kapittel 2* er det forventet at den avgjørende faktoren for økonomisk vekst er spareraten. Nivået på kapitalintensitet er avgjørende for nivå på produksjon og ettersom det ikke er noe konkret mål på kapitalintensitet er det spareraten som her er i fokus.
 
-Til slutt skal du diskutere implikasjoner for policy (politiske inngrep). Basert på din analyse, hva ville du anbefale at politiker, som ønsker å oppnå bærekraftig vekst, skal føre for politikk?
+vekstraten i teknologi, vekstraten i kvalitet på kapital, kvalitet på arbeid og kvalitet på naturressurser skal alle ha en positiv påvirkning. Disse kan alle oppsummeres under kategorien teknologisk utvikling. I tillegg er det forventet at spareraten og vekstraten i arbeidskraft skal ha en positivt innvirkning.
 
-Etter å ha tolket alle tabeller og grafer som har mulighet til å gi svar på problemstillingen er det noen klare konklusjoner som kan trekkes
-
-De verdiene som er forventet å påvirke positivt:
-
--   Vekstrate i teknologi
--   Vekstrate i kvalitet på kapital
--   Vekstrate i kvalitet på arbeid
--   Vekstrate i kvalitet på naturressurser.
-
-Alle over kan forklares av teknologisk utvikling
-
--   Spareraten
--   Vekstraten i arbeidskraften
-
-De verdiene som er forventet å påvirke negativt:
-
--   Reduksjonsrate i naturressurser
--   Befolkningsveksten
+Samtidig er det forventet at reduksjonsrate i naturressurser har en negativ effekt på BNP per innbygger.
 
 Vår data inneholder verdier for teknologisk utvikling i form av humankapital (utdanning). Denne verdien viste seg å både ha en positiv påvirkning på BNP per innbygger, samtidig som at den hadde en signifikant p-verdi. Det betyr at observasjonene korrelerer med vår prediksjon.
 
-Spareraten er forventet å påvirker på en sånn måte at ved høyere sparerate så vil BNP per innbygger vokse. I vår data har spareraten en negativ effekt på BNP per innbygger samtidig som dataene ikke er signifikant. Noen direkte konklusjon kan dermed ikke trekkes.
+Spareraten er forventet å påvirker på en sånn måte at ved høyere sparerate så vil BNP per innbygger vokse. I vår data har spareraten en negativ effekt på BNP per innbygger samtidig som dataene ikke er signifikant. Noen direkte konklusjon kan dermed ikke trekkes, men det er viktig å påpeke at det ser ut til å være noe utfordrende med denne observasjonen.
 
-Vekstraten i arbeidskraft eller befolkningsvekstraten påvirker positivt. Singifikant. Stemmer med teori.
+Vekstraten i arbeidskraft påvirker positivt. Dette stemmer også med teorien fra *kapittel 2*.
+
+Fra det teoretiske og det analytiske er det viktige momenter som er avgjørende for økonomisk vekst. I verden i dag er det stor ulikhet mellom land når det kommer til produksjon, potensiale for produksjon, tilgangen på naturressurser og mange andre faktorer. Om målet er å oppnå økonomisk vekst så er de viktigste politiske inngrepene trygget, sikkerhet og korrupsjon. For å oppnå stabil økonomisk vekst er det viktig med stabil politisk kontroll.
+
+Denne stabiliteten er avgjørende for de private investeringene som gjøres ettersom disse er med på å øke kapitalintensiteten. Om det er land med lav trygget, sikkerhet og mye korrupsjon vil det være få insentiver for privatpersoner å investere i kapital eller drive med næringsliv. Dette fører til lavere sysselsetting og lavere kapitalintensitet. Så for land med mye ustabilitet trenger først og fremst oppnå stabilitet.
+
+Neste nivå med tiltak er i gruppen humankapital. Økt humankapital er viktige bidragsytere til en rikere og mer velstående befolkning. Humankapital innebærer alt fra skolegang til helsevesen. Om befolkningen har god utdanning og god helse vil arbeidere bli mer effektive, smartere, sterkere og produktive, som er med på å øke produksjon og økonomisk vekst. I tillegg er det først og fremst mennesker som står for teknologisk utvikling, for å kunne produsere ny teknologi er det nødvendig med økt humankapital i form av utdanning.
+
+## Appendiks
+
+R-kode på [GitHub](https://github.com/haavardchr/SOK-2011-Mappeevaluering)
+
+## Referanser
