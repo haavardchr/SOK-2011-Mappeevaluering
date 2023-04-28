@@ -554,40 +554,38 @@ Regresjonstabell 2 viser igjen vekstrate i BNP men denne gangen hvordan sammenhe
 
 Første forklarende variabel er befolkningsvekstrate. Denne har en negativ påvirkning på vekstrate i BNP, -0,63, og p-verdien er igjen signifikant, \<0,001. Nullhypotesen kan igjen forkastes og en kan dra konklusjon om at en økning i befolkningsvekstrate har en negativ effekt på BNP per innbygger. Altså at ved en økning i hvor mange mennesker som fødes per år vil veksten i BNP reduseres.
 
-Neste forklarende variabel er humankapital, i dette datasettet, utdanning. Utdanning har en negativ påvirkning på vekst i BNP, -0,13, og en signifikant p-verdi, 0,033. Nullhypotesen kan dermed forkastes, utdanning har en påvirkning på BNP per innbygger. Det vil si at for hvert ekstra år med utdanning i snitt så reduseres veksten i BNP med en verdi på 0,13.
+Neste forklarende variabel er humankapital, i dette datasettet, utdanning. Utdanning har en negativ påvirkning på vekst i BNP, -0,13, og en signifikant p-verdi, 0,033. Nullhypotesen kan dermed forkastes som betyr at utdanning har en effekt på vekst i BNP. Det vil si at for hvert ekstra år med utdanning i snitt så reduseres veksten i BNP med en verdi på 0,13.
 
-Siste forklarende variabel er eksportvekstrate. Eksportvekstraten har en positivt påvirkning, 0,32, med en signifikant p-verdi, \<0.001. Den har ingen påvirkning samtidig som det er en veldig høy p-verdi. Den påvirker altså ikke BNP i det hele tatt.
+Siste forklarende variabel er eksportvekstrate. Eksportvekstraten har en positivt påvirkning, 0,32, med en signifikant p-verdi, \<0.001. Mengden eksport og vekstraten til eksport har altså en positivt effekt på veksten i BNP.
 
-$R^2$ er på 75%. De forklarende variablene i tabellen er gode indikatorer på hva som påvirker utviklingen i BNP per innbygger.
+Regresjonstabell 2 har en noe høyere $R^2$ og $R^2$ justert, med 0,538 og 0,522. De forklarende variablene i tabellen er gode indikatorer og forklarer omtrent 50% av årsaken til vekst i BNP.
 
 ```{r LingregStor, echo=FALSE, warning=FALSE}
 #tab_model(model1, model2, CSS = css_theme("cells"))
 knitr::include_graphics("Model3.png")
 ```
 
-For å kunne se på alle verdiene sammen blir de kombinert sammen til en felles tabell. Tabellen over viser hvordan nivået på BNP per innbygger i 2019 (log) påvirkes av de ulike forklarende variablene.
+For å kunne se på alle verdiene sammen blir de kombinert sammen til en felles tabell. Tabellen over viser hvordan vekst i BNP påvirkes av alle de tidligere nevnte forklarende variablene.
 
-Ved å sette tabellene i lag kan en enkelt se på forskjellene. Den tydeligste forskjellen er verdien på $R^2$ og adjusted- $R^2$. De tre variablene befolkningsvekstrate, utdanning og eksportvekstrate forklarer 75% av utviklingen i BNP per innbygger. Det er nesten tre ganger så mye som de tre variablene sparing, investeringsvekstrate og reduksjonsrate i ressurser.
+Ved å sette tabellene i lag kan en enkelt se på forskjellene. Det som er viktig notere seg er at alle verdier har en påvirkning på vekstraten i BNP. Det vil si at alle faktorer, utenom sparing som andel av BNI, har en p-verdi lavere enn standard signifikansnivå på 0,05. Sparing har en litt høyere, men denne verdien er bare 2,8% mer enn grensen, noe som vil si at en kan i 9 av 10 tilfeller bekrefte at sparing har en påvirkning. Den vanlige grensen er på 19 av 20 tilfeller, en stor forskjell, men denne forskjellen tilsvarer bare 5%.
+
+Den tydeligste forskjellen er verdien på $R^2$ og adjusted- $R^2$. De tre variablene befolkningsvekstrate, utdanning og eksportvekstrate forklarer 50% av utviklingen vekst i BNP. Det er en betydelig mengde og totalt så viser hele tabellen omtrent 80% av årsakene til utvikling i vekstraten i BNP. Dette betyr både at mye av utviklingen er kartlagt og bekreftet, samtidig som det er 20% av utviklingen som vi ikke kan si noe om eller bevise hvor kommer fra.
 
 ## 5. Diskusjon
 
-Målet med denne rapporten er å finne ut hvordan økonomisk vekst kan oppstå. Det vil si at formålet har vært å finne ut hvilke variabler påvirker BNP per innbygger og vekstraten i BNP. Fra teorien i *kapittel 2* er det forventet at den avgjørende faktoren for økonomisk vekst er spareraten. Nivået på kapitalintensitet er avgjørende for nivå på produksjon og ettersom det ikke er noe konkret mål på kapitalintensitet er det spareraten som her er i fokus.
+Målet med denne rapporten er å finne ut hvordan økonomisk vekst kan oppstå. Det vil si at formålet har vært å finne ut hvilke variabler påvirker BNP per innbygger og vekstraten i BNP. Fra teorien i *kapittel 2* er det forventet at den avgjørende faktoren for økonomisk vekst er spareraten. Nivået på kapitalintensitet er avgjørende for nivå på produksjon og ettersom det ikke er noe konkret mål på kapitalintensitet er det spareraten og utviklingen i spareraten som havner i fokus. Samtidig som det er andre faktorer som har påvirkning, enten direkte eller indirekte på utviklingen totalt.
 
-vekstraten i teknologi, vekstraten i kvalitet på kapital, kvalitet på arbeid og kvalitet på naturressurser skal alle ha en positiv påvirkning. Disse kan alle oppsummeres under kategorien teknologisk utvikling. I tillegg er det forventet at spareraten og vekstraten i arbeidskraft skal ha en positivt innvirkning.
+Fra datasettet, grafene, tabellene og de statistiske testene er det klart at eksisterende nivå på BNP og vekst i BNP er veldig ulikt fra land til land, region til region og verdensdel til verdensdel. De landene man forventer at skal ha høyt nivå på BNP, Europa og Nord-Amerika, har høy BNP. Samtidig som land i syd-Afrika og syd-Asia har lavere nivåer på BNP. Når det kommer til utviklingen i BNP og vekst i BNP er det ikke like tydelig hvordan land, regioner og verdensdeler som har best potensiale.
 
-Samtidig er det forventet at reduksjonsrate i naturressurser har en negativ effekt på BNP per innbygger.
+Det som er viktigst å konkludere med er at de momentene som ble nevnt i teorien i *kapittel 2* for hva som påvirker utvikling i BNP, spareraten og utvikling i spareraten, begge to har en positiv effekt på utviklingen i BNP. Med andre ord, predikasjonen stemmer med virkeligheten. Det var ikke en helt signifikant p-verdi for spareraten, men det er ingen tvil om at den har en direkte påvirkning på vekst i BNP.
 
-Vår data inneholder verdier for teknologisk utvikling i form av humankapital (utdanning). Denne verdien viste seg å både ha en positiv påvirkning på BNP per innbygger, samtidig som at den hadde en signifikant p-verdi. Det betyr at observasjonene korrelerer med vår prediksjon.
-
-Spareraten er forventet å påvirker på en sånn måte at ved høyere sparerate så vil BNP per innbygger vokse. I vår data har spareraten en negativ effekt på BNP per innbygger samtidig som dataene ikke er signifikant. Noen direkte konklusjon kan dermed ikke trekkes, men det er viktig å påpeke at det ser ut til å være noe utfordrende med denne observasjonen.
-
-Vekstraten i arbeidskraft påvirker positivt. Dette stemmer også med teorien fra *kapittel 2*.
-
-Fra det teoretiske og det analytiske er det viktige momenter som er avgjørende for økonomisk vekst. I verden i dag er det stor ulikhet mellom land når det kommer til produksjon, potensiale for produksjon, tilgangen på naturressurser og mange andre faktorer. Om målet er å oppnå økonomisk vekst så er de viktigste politiske inngrepene trygget, sikkerhet og korrupsjon. For å oppnå stabil økonomisk vekst er det viktig med stabil politisk kontroll.
+Fra det teoretiske og det analytiske er det viktige momenter som er avgjørende for økonomisk vekst. I verden i dag er det stor ulikhet mellom land når det kommer til produksjon, potensiale for produksjon og tilgangen på naturressurser, i tillegg til flere andre viktige faktorer. Om målet er å oppnå økonomisk vekst så er de viktigste politiske inngrepene trygget, sikkerhet og korrupsjon. For å oppnå stabil økonomisk vekst er det viktig med stabil politisk kontroll.
 
 Denne stabiliteten er avgjørende for de private investeringene som gjøres ettersom disse er med på å øke kapitalintensiteten. Om det er land med lav trygget, sikkerhet og mye korrupsjon vil det være få insentiver for privatpersoner å investere i kapital eller drive med næringsliv. Dette fører til lavere sysselsetting og lavere kapitalintensitet. Så for land med mye ustabilitet trenger først og fremst oppnå stabilitet.
 
 Neste nivå med tiltak er i gruppen humankapital. Økt humankapital er viktige bidragsytere til en rikere og mer velstående befolkning. Humankapital innebærer alt fra skolegang til helsevesen. Om befolkningen har god utdanning og god helse vil arbeidere bli mer effektive, smartere, sterkere og produktive, som er med på å øke produksjon og økonomisk vekst. I tillegg er det først og fremst mennesker som står for teknologisk utvikling, for å kunne produsere ny teknologi er det nødvendig med økt humankapital i form av utdanning.
+
+Til sist er det viktig å ha en kontinuerlig teknologisk utvikling. Teknologien som utvikles i dag er med på å effektivisere store deler av samfunnet og teknologien som utvikles i løpet av de kommende årene kommer antageligvis til å ha en enda større effekt enn dagens teknologi. Det å gi gode insentiver til befolkningen for å drive med invasjon, og spesielt bærekraftig invasjon vil være avgjørende for en verden som alltid er i endring. Ikke bare med fokus på økonomisk vekst, men med ett økt fokus på bærekraftig økonomisk vekst.
 
 ## Appendiks
 
