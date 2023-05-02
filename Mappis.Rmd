@@ -10,35 +10,37 @@ csl: norsk-apa-manual-note.csl
 
 ## 1. Introduksjon
 
-*Homo sapiens* er den arten på jordkloden som har tilpasset seg best og utviklet seg lengst. Arten har over tid klart å oppnå mye fra et lite utgangspukt. Fra å leve som nomadiske jegere og sankere med lav materiell velferd, levestandard og kort forventet levealder, kan menneskeheten i dag fryde seg over evnen hva den har oppnådd; utforske verdensrommet, knytte mennesker over hele verden sammen og kureringen av dødelige sykdommer. Alt dette har vært med på å øke menneskets materielle velferd, levestandard og forventet levealder. Denne oppgaven blir å analysere utviklingen i materiell velferd. Materiell velferd er avhengig av teknologisk utvikling og befolkningsvekst, og målet med denne oppgaven er å gi et uttrykk for denne utviklingen.
+*Homo sapiens* er den arten på jordkloden som har tilpasset seg best og utviklet seg lengst. Arten har over tid klart å oppnå mye fra et lite utgangspunkt. Fra å leve som nomadiske jegere og sankere med lav materiell velferd, levestandard og kort forventet levealder, kan menneskeheten i dag fryde seg over alt den har oppnådd; utforskning av verdensrommet, globalisering og kureringen av dødelige sykdommer. Alt dette har vært med på å øke menneskets materielle velferd, levestandard og forventet levealder. Denne oppgaven har som mål å analysere vekst i materiell velferd. Materiell velferd er avhengig av flere faktorer som påvirker veksten på ulike måter, hvor målet med denne oppgaven er å gi et uttrykk for denne utviklingen.
 
-I dag er det store kontraster på økonomisk vekst og potensiale for økonomisk vekst i ulike land. Derfor er det interessant å se på hvorfor noen land har bedre materiell velferd enn andre og hvorfor potensialet for økonomisk vekst er høyere i noen land enn andre. Denne oppgaven blir å benytte seg av modeller og matematiske utregninger for økonomisk vekst for å svare på det overordnede spørsmålet: hvilke faktorer bestemmer økonomisk vekst i materiell velferd i det lange løp?
+I dag er det store kontraster mellom økonomisk vekst og potensiale for økonomisk vekst i ulike land. Derfor er det interessant å se på hvorfor noen land har bedre materiell velferd enn andre og hvorfor potensialet for økonomisk vekst er høyere i noen land enn andre. I denne oppgaven benytter jeg modeller og matematiske utregninger for økonomisk vekst for å svare på det overordnede spørsmålet: hvilke faktorer bestemmer økonomisk vekst i materiell velferd i det lange løp?
 
-Oppgaven blir å bestå av en teoridel, denne gjør rede for den relevante teorien som benyttes. Her er det både teori i form av matematiske funksjoner og økonomisk intuisjon som blir redegjort. Videre vil den inneholde en metodedel hvor dataene forklares. De ulike datasettene som benyttes samt hvordan datasett og pakker er strukturert. Resultatene presenteres, både grafisk og skriftlig. I diskusjonen sammenlignes den teoretiske innledningen med den analytiske resultatdelen. Til slutt er det en konklusjon som er med på å oppsummere hele oppgaven samt besvarer på problemstillingen.
+Oppgaven blir å bestå av en teoridel, denne gjør rede for den relevante teorien som benyttes. Her er det både teori i form av matematiske funksjoner og økonomisk intuisjon som blir redegjort. Videre vil oppgaven inneholde en metodedel hvor dataene forklares. De ulike datasettene som benyttes samt hvordan datasett og pakker er strukturert. Resultatene presenteres, både grafisk og skriftlig. I diskusjonen sammenlignes den teoretiske innledningen med den analytiske resultatdelen. Til slutt er det en konklusjon oppsummerer hele oppgaven, samt besvarer på problemstillingen.
 
 ## 2. Teori
 
-Økonomisk utvikling er grunnprinsippet for materiell forbedring. For å forstå økonomisk utvikling som mål brukes brutto-nasjonal-produkt, BNP. Dette er en verdi på alle goder og tjenester produsert innenfor en økonomi (land eller annet definert område) i løpet av en bestemt periode (oftest et år). BNP eller $Y$ er summen av innsatsfaktorene: $C+I+G+X-M$, privat konsum + investeringer + offentlig konsum og investeringer + import - export Dette gir $C+I+G+X-M=Y$. På lang sikt, som er hva denne oppgaven er rettet mot, er det ingen begrensninger for produksjonen som følge av etterspørsel, kun produksjonsmulighetene. Disse produksjonsmulighetene er påvirket av mengden ressurser tilgjengelig, teknologisk nivå, ressurskvalitet og ressurseffektivisering.
+Økonomisk utvikling er grunnprinsippet for materiell forbedring. For å forstå økonomisk utvikling brukes målet på brutto-nasjonal-produkt, BNP. Dette er et mål på alle goder og tjenester produsert i en økonomi (land eller annet definert område) i løpet av en bestemt periode (oftest et år). BNP eller $Y$ er summen av innsatsfaktorene: $C+I+G+X-M$, privat konsum + investeringer + offentlig konsum og investeringer + import - export Dette gir $C+I+G+X-M=Y$. På lang sikt, som er fokus i denne oppgaven, er det ingen begrensninger for produksjonen som følge av etterspørsel, kun produksjonsmulighetene. Disse produksjonsmulighetene påvirkes av mengden ressurser tilgjengelig, teknologisk nivå, ressurskvalitet og ressurseffektivisering.
 
 For å måle økonomisk vekst er det viktig å se på BNP per innbygger:
 
-$(2.1) y=Y/L$ , BNP per inbygger $= BNP/Innbyggere$
+$(2.1) y=Y/L$ , BNP per inbygger $= \frac{BNP}{Befolkningen}$
 
 For at ett land skal kunne oppnå en økning i økonomisk vekst må endringen i BNP per innbygger være større enn endring i befolkningen.
 
 $(2.2) dy/y = dY/Y-dP/P$
 
-Økonomisk vekst er altså en positiv endring i BNP per innbygger. Denne endringen blir mål over tid, så den er avhengig av en tidsvariabel.
+Økonomisk vekst er altså en positiv endring i BNP per innbygger. Denne endringen måles over tid, tidsvariabel visualisert ved $(t)$.
 
-Modellen som brukes for å forklare hvordan materiell velferd og økonomisk vekst oppstår er Solow-modelen, hvor kapitalakkumulasjon, befolkningsvekst og teknologisk fremgang er hovedfaktorene.
+Modellen som benyttes for å forklare hvordan materiell velferd og økonomisk vekst oppstår er Solow-modellen, hvor kapitalakkumulasjon, befolkningsvekst, teknologisk fremgang og naturressurs-tilgang er hoved-produksjonsfaktorene.
 
--   Kapitalakkumulasjon eller økningen i kapitalbeholdning er den totale mengden kapital som kan benyttes. Denne er økningen kommer fra de offentlige og private investeringene som gjøres i en økonomi.
+-   Kapitalakkumulasjon eller økningen i kapitalbeholdning er den totale mengden kapital som kan benyttes. Denne økningen kommer fra de offentlige og private investeringene som gjøres i en økonomi. Noen av investeringene brukes til å produsere ny kapital andre for å vedlikeholde eksisterende kapital.
 
--   Befolkningsveksten er den naturlige endringen i befolkningen over tid. I denne oppgaven er det gjort en antagelse om at befolkningen vokser konstant over tid for å forenkle. I virkeligheten er befolkningsveksten alltid i endring.
+-   Befolkningsveksten er den naturlige endringen i befolkningen over tid. I denne teorien er det gjort en antagelse om at befolkningen vokser konstant over tid for å forenkle. I virkeligheten er befolkningsveksten alltid i endring og ulik fra land til land.
 
--   Teknologisk fremgang er faktorene som påvirker produktivitet og effektivitet. Teorien predikerer at teknologisk fremgang er konstant og at den over tid har flere effekter. Den påvirker effektiviteten av kapitalen, både ved å oppgradere eksisterende kapital og forbedring av ny kapital. Effektiviteten til arbeidskraften går opp som følge av at arbeidere blir mer effektive og de kan benytte mer effektive instrumenter og verktøy. Samt naturressursene blir både mer effektivt benyttet og utvinningen forbedres.
+-   Teknologisk fremgang er faktorene som påvirker produktivitet og effektivitet. Teorien predikerer at teknologisk fremgang er konstant og at den over tid har flere effekter. Den påvirker effektiviteten av kapitalen, både ved å oppgradere eksisterende kapital og forbedring av ny kapital. Effektiviteten til arbeidskraften går opp som følge av at arbeidere blir mer effektive og de kan benytte mer effektive instrumenter og verktøy. Samt naturressursene blir både mer effektivt benyttet og utvinningen av disse naturressursene forbedres.
 
-Solow modellen har fire ligninger på basisnivå som er avgjørende for hvordan økonomisk vekst oppstår.
+-   Naturressursene ett land totalt har tilgjengelig. Deles inn i to grupperinger, fornybare og ikke-fornybare. Ved god planlegging og og kvotering vil fornybare ressurser være tilgjengelig for generasjoner i fremtiden. Ikke-fornybare eksisterer det bare en bestemt mengde med. Ulike land har tilgang på ulike mengder naturressurser og ulike typer. Teorien predikerer at naturressursene vil minke over tid, dette som følge av at befolkningen øker.
+
+Solow-modellen har fire ligninger på basisnivå som er avgjørende for hvordan økonomisk vekst oppstår.
 
 $(2.3) Y(t)=F[K(t), L(t)]$ : funksjon for aggregert produksjon
 
@@ -102,11 +104,29 @@ $s^1*y$ viser opprinnelig nivå på investeringer og $k^1$ opprinnelig nivå på
 
 Isolert sett vil det si at spareraten er avgjørende for om en økonomi kan oppnå økonomisk vekst. Alle økonomier vil over tid utvikle seg til ett steady state nivå der veksten stoppes. For å kunne videreutvikle seg fra steady state må investeringsraten øke samtidig som befolkningsveksten er konstant.
 
+Om en tar med alle produksjonsfaktorer i Solow-modellen gir dette ligning:
+
+$(2.12) Y(t)=A(t)*F[K(t), L(t), R(t)]$: Solow-modell med teknologi og naturressurser
+
+Denne produksjonsfunksjonen er en utvidelse av ligning $(2.3)$ og inneholder en to nye endogene variabler, $A$ og $R$, teknologi og naturressurser. Hvor teknologi påvirker alle de andre produksjonsfaktorene. Dette gir en spesifikk produksjonsfunksjon:
+
+$(2.12) Y(t)=A(t)*[q_k(t)*K(t)]^\alpha*[q_L(t)*L(t)]^\beta*[q_R(t)*R(t)]^\gamma$
+
+I denne funksjonen så er alle q-ledd kvalitetsindekser for de ulike produksjonsfaktorene. Eksponentene er lik $\alpha+\beta+\gamma=1$. I tillegg er det en naturlig reduksjonsrate i naturressurser.
+
+Om en forenkler effekten av teknologi i Solow-modellen så er den med på å øke totalnivået på BNP. Teknologisk utvikling har en effekt på hvor effektivt kapitalen er, hvor effektiv arbeiderne er og hvor effektivt naturressursene benyttes. Den totale effekten er at BNP øker som følge av teknologiske fremskritt.
+
+```{r OektTekno, echo=FALSE, warning=FALSE, out.width="400px", out.height="400px"}
+knitr::include_graphics("OektTekno.PNG")
+```
+
+Alt i alt er det en økning i produksjonsfaktorene som er avgjørende for økonomisk vekst.
+
 ## 3. Metode og data
 
 ### 3.1 Data
 
-Dataen til dette prosjektet er hentet fra World Development Indicators laget av Verdensbanken. Dette inneholder data for flere viktige variabler, som BNP per innbygger, arbeidsstyrken, befolkningsvekstrate, vekstrate i investeringer, reduksjon i naturressurser osv. Alle disse variablene vil være med på å bevise de overordnede spørsmålene om økonomisk utvikling og forskjellen i økonomisk utvikling i forskjellige land.
+Dataene til dette prosjektet er hentet fra World Development Indicators laget av Verdensbanken. Dette datasettet inneholder info over flere viktige variabler, som BNP per innbygger, arbeidsstyrken, befolkningsvekstrate, vekstrate i investeringer, reduksjon i naturressurser osv. Alle disse variablene vil være med på å bevise de overordnede spørsmålene om økonomisk utvikling og forskjellen i økonomisk utvikling i forskjellige land.
 
 ```{r Packs and info, warning=FALSE, include=FALSE}
 suppressPackageStartupMessages(library(WDI))
@@ -386,7 +406,7 @@ st(df, out = 'kable', title = 'Deskriptiv statistikk', labels=labs,
 
 Som vi ser fra tabellen over er det hentet ut info om observasjonene i de forskjellige landene. Tabellen viser verdier for antall, gjennomsnitt, standardavvik, laveste verdi og høyeste verdi for ulike endogene og eksogene variabler: vekstrate i BNP, befolkningsvekst, netto-sparing, antall år i skole, reduksjonsrate i naturressurser, vekst i investeringer, vekst i arbeidskraft, vekst i eksport og BNP per innbygger på log form. Tabellen sier ikke så mye i seg selv, men den gir en oversikt over hvordan dataene ser ut i tillegg til å gi en indikator på hvilket spekter de ulike verdiene er.
 
-```{r BNP(log) og sparing, echo=FALSE, message=FALSE, warning=FALSE, out.width="400px", out.height="400px"}
+```{r BNP(log) og sparing, echo=FALSE, message=FALSE, warning=FALSE, out.width="300px", out.height="300px"}
 plot1 <- ggplot(no_outliers, aes(x = avg_nsy , y = ln_gdppc, na.rm = TRUE)) +
   xlab("Sparing som andel av BNI (Netto)") + 
   ylab("BNP/innbygger 2019") + 
@@ -407,7 +427,7 @@ plot1 <- ggplot(no_outliers, aes(x = avg_nsy , y = ln_gdppc, na.rm = TRUE)) +
 plot1
 ```
 
-```{r BNP(log) og befolkningsvekst, echo=FALSE, message=FALSE, warning=FALSE, out.width="400px", out.height="400px"}
+```{r BNP(log) og befolkningsvekst, echo=FALSE, message=FALSE, warning=FALSE, out.width="300px", out.height="300px"}
 plot2 <- ggplot(no_outliers, aes(x = avg_p , y = ln_gdppc, na.rm = TRUE)) +
   xlab("Befolkningsvekst") + 
   ylab("BNP/innbygger 2019") +
@@ -427,7 +447,7 @@ plot2 <- ggplot(no_outliers, aes(x = avg_p , y = ln_gdppc, na.rm = TRUE)) +
 plot2
 ```
 
-```{r BNP(log) og humankapital, echo=FALSE, message=FALSE, warning=FALSE, out.height="400px", out.width="400px"}
+```{r BNP(log) og humankapital, echo=FALSE, message=FALSE, warning=FALSE, out.height="300px", out.width="300px"}
 plot3 <- ggplot(no_outliers, aes(x = avg_educ , y = ln_gdppc, na.rm = TRUE)) +
   xlab("Humankapital, utdanning") + 
   ylab("BNP/innbygger 2019") + 
@@ -536,7 +556,7 @@ Regresjonstabell 1 viser sammenhengen mellom de forklarende variabler sparing, v
 
 Den første forklarende variabelen er sparing som andel av BNI eller spareraten. Den har en liten positiv påvirkning på BNP, 0,04, men en p-verdi på 0,078. Dette er noe høyere enn bestemt signifikansnivå, så $H_0$ beholdes. En kan ikke konkludere med at det er ett klart sammenheng mellom vekst i BNP og sparing fra vår data. Det skal sies derimot at en p-verdi mellom 5% og 10% er fortsatt en positiv korrelasjon som vil si at sparing har en påvirkning på vekst i BNP men vår data klarer ikke å bevise det med nok sikkerhet.
 
-Neste forklarende variabel er årlig vekstrate i investeringer, eller endring i spareraten. Den har en positivt påvirkning på BNP, 0,28, med en signifikant p-verdi, \<0,001. Det betyr at nullhypotesen forkastes og at vekstraten i BNP påvirkes av vekstraten i investeringer. Med andre ord, en økning i vekstraten i investeringer har en positvit innvirkning på vekstraten i BNP.
+Neste forklarende variabel er årlig vekstrate i investeringer, eller endring i spareraten. Den har en positivt påvirkning på BNP, 0,28, med en signifikant p-verdi, \<0,001. Det betyr at nullhypotesen forkastes og at vekstraten i BNP påvirkes av vekstraten i investeringer. Med andre ord, en økning i vekstraten i investeringer har en positvi innvirkning på vekstraten i BNP.
 
 Siste forklarende variabel fra denne tabellen er reduksjonsrate i naturressurser. Denne variabelen har en negativ påvirkning på vekst i BNP, -0,13 og en signifikant p-verdi, \<0,001. Det betyr igjen at nullhypotesen forkastes og en kan konkludere med at vekstraten i BNP reduseres som følge av at mengden naturressurser som benyttes økes.
 
@@ -565,29 +585,59 @@ Regresjonstabell 2 har en noe høyere $R^2$ og $R^2$ justert, med 0,538 og 0,522
 knitr::include_graphics("Model3.png")
 ```
 
-For å kunne se på alle verdiene sammen blir de kombinert sammen til en felles tabell. Tabellen over viser hvordan vekst i BNP påvirkes av alle de tidligere nevnte forklarende variablene.
+For å kunne se på alle verdiene sammen blir de kombinert sammen til en felles tabell. Tabellen over viser hvordan vekst i BNP påvirkes av alle de tidligere nevnte forklarende variablene. Tabellen er delt i to for å vise forskjell i $R^2$ verdi mellom ulike forklarende variabler.
 
 Ved å sette tabellene i lag kan en enkelt se på forskjellene. Det som er viktig notere seg er at alle verdier har en påvirkning på vekstraten i BNP. Det vil si at alle faktorer, utenom sparing som andel av BNI, har en p-verdi lavere enn standard signifikansnivå på 0,05. Sparing har en litt høyere, men denne verdien er bare 2,8% mer enn grensen, noe som vil si at en kan i 9 av 10 tilfeller bekrefte at sparing har en påvirkning. Den vanlige grensen er på 19 av 20 tilfeller, en stor forskjell, men denne forskjellen tilsvarer bare 5%.
 
-Den tydeligste forskjellen er verdien på $R^2$ og adjusted- $R^2$. De tre variablene befolkningsvekstrate, utdanning og eksportvekstrate forklarer 50% av utviklingen vekst i BNP. Det er en betydelig mengde og totalt så viser hele tabellen omtrent 80% av årsakene til utvikling i vekstraten i BNP. Dette betyr både at mye av utviklingen er kartlagt og bekreftet, samtidig som det er 20% av utviklingen som vi ikke kan si noe om eller bevise hvor kommer fra.
+Den tydeligste forskjellen er verdien på $R^2$ og justert (adjusted)- $R^2$. De tre variablene befolkningsvekstrate, utdanning og eksportvekstrate forklarer 50% av utviklingen vekst i BNP. Det er en betydelig mengde og totalt så viser hele tabellen omtrent 80% av årsakene til utvikling i vekstraten i BNP. Dette betyr både at mye av utviklingen er kartlagt og bekreftet, samtidig som det er 20% av utviklingen som vi ikke kan si noe om eller bevise hvor kommer fra.
 
 ## 5. Diskusjon
 
-Målet med denne rapporten er å finne ut hvordan økonomisk vekst kan oppstå. Det vil si at formålet har vært å finne ut hvilke variabler påvirker BNP per innbygger og vekstraten i BNP. Fra teorien i *kapittel 2* er det forventet at den avgjørende faktoren for økonomisk vekst er spareraten. Nivået på kapitalintensitet er avgjørende for nivå på produksjon og ettersom det ikke er noe konkret mål på kapitalintensitet er det spareraten og utviklingen i spareraten som havner i fokus. Samtidig som det er andre faktorer som har påvirkning, enten direkte eller indirekte på utviklingen totalt.
+Målet med denne rapporten er å finne ut hvordan økonomisk vekst kan oppstå. Å finne ut hvilke variabler som påvirker BNP per innbygger og vekstraten i BNP. Fra teorien i *kapittel 2* er det forventet at den avgjørende faktoren for økonomisk vekst er spareraten. Nivået på kapitalintensitet er avgjørende for nivå på produksjon og ettersom det ikke er noe konkret mål på kapitalintensitet er det spareraten og utviklingen i spareraten som havner i fokus. Samtidig som det er andre faktorer som har påvirkning, enten direkte eller indirekte, på utviklingen totalt.
 
 Fra datasettet, grafene, tabellene og de statistiske testene er det klart at eksisterende nivå på BNP og vekst i BNP er veldig ulikt fra land til land, region til region og verdensdel til verdensdel. De landene man forventer at skal ha høyt nivå på BNP, Europa og Nord-Amerika, har høy BNP. Samtidig som land i syd-Afrika og syd-Asia har lavere nivåer på BNP. Når det kommer til utviklingen i BNP og vekst i BNP er det ikke like tydelig hvordan land, regioner og verdensdeler som har best potensiale.
 
-Det som er viktigst å konkludere med er at de momentene som ble nevnt i teorien i *kapittel 2* for hva som påvirker utvikling i BNP, spareraten og utvikling i spareraten, begge to har en positiv effekt på utviklingen i BNP. Med andre ord, predikasjonen stemmer med virkeligheten. Det var ikke en helt signifikant p-verdi for spareraten, men det er ingen tvil om at den har en direkte påvirkning på vekst i BNP.
+Det som er viktigst å poengtere er at de momentene som ble nevnt i teorien i *kapittel 2*, spareraten og utvikling i spareraten, begge har en positiv effekt på utviklingen i BNP. Med andre ord, prediksjonen og teorien stemmer med den dataen vi har tilgjengelig. Det var ikke en helt signifikant p-verdi for spareraten, men det er ingen tvil om at den har en direkte påvirkning på vekst i BNP.
 
-Fra det teoretiske og det analytiske er det viktige momenter som er avgjørende for økonomisk vekst. I verden i dag er det stor ulikhet mellom land når det kommer til produksjon, potensiale for produksjon og tilgangen på naturressurser, i tillegg til flere andre viktige faktorer. Om målet er å oppnå økonomisk vekst så er de viktigste politiske inngrepene trygget, sikkerhet og korrupsjon. For å oppnå stabil økonomisk vekst er det viktig med stabil politisk kontroll.
+I verden i dag er det stor ulikhet mellom land når det kommer til produksjon, potensiale for produksjon og tilgangen på naturressurser, i tillegg til flere andre viktige faktorer. Om målet er å oppnå økonomisk vekst så er de viktigste politiske inngrepene trygget, sikkerhet og korrupsjon. For å oppnå stabil økonomisk vekst er det viktig med stabil politisk kontroll.
 
-Denne stabiliteten er avgjørende for de private investeringene som gjøres ettersom disse er med på å øke kapitalintensiteten. Om det er land med lav trygget, sikkerhet og mye korrupsjon vil det være få insentiver for privatpersoner å investere i kapital eller drive med næringsliv. Dette fører til lavere sysselsetting og lavere kapitalintensitet. Så for land med mye ustabilitet trenger først og fremst oppnå stabilitet.
+Denne stabiliteten er avgjørende for at private parter har insentiv til å investere inn i økonomien som fører til øket kapitalintensitet. Om ett land har lite trygget, sikkerhet og mye korrupsjon vil det være få grunner for privatpersoner til å investere i kapital eller drive næringsliv. Dette fører til lavere sysselsetting og lavere kapitalintensitet. Så for land med mye ustabilitet trenger burde første prioritering være å øke stabilitet.
 
 Neste nivå med tiltak er i gruppen humankapital. Økt humankapital er viktige bidragsytere til en rikere og mer velstående befolkning. Humankapital innebærer alt fra skolegang til helsevesen. Om befolkningen har god utdanning og god helse vil arbeidere bli mer effektive, smartere, sterkere og produktive, som er med på å øke produksjon og økonomisk vekst. I tillegg er det først og fremst mennesker som står for teknologisk utvikling, for å kunne produsere ny teknologi er det nødvendig med økt humankapital i form av utdanning.
 
-Til sist er det viktig å ha en kontinuerlig teknologisk utvikling. Teknologien som utvikles i dag er med på å effektivisere store deler av samfunnet og teknologien som utvikles i løpet av de kommende årene kommer antageligvis til å ha en enda større effekt enn dagens teknologi. Det å gi gode insentiver til befolkningen for å drive med invasjon, og spesielt bærekraftig invasjon vil være avgjørende for en verden som alltid er i endring. Ikke bare med fokus på økonomisk vekst, men med ett økt fokus på bærekraftig økonomisk vekst.
+Til sist er det viktig å ha en kontinuerlig teknologisk utvikling. Teknologien som utvikles i dag er med på å effektivisere store deler av samfunnet og teknologien som utvikles i løpet av de kommende årene kommer antageligvis til å ha en enda større effekt enn dagens teknologi. Det å gi gode insentiver til befolkningen for å drive med innovasjon, og spesielt bærekraftig innovasjon vil være avgjørende for en verden som alltid er i endring. Ikke bare med fokus på økonomisk vekst, men med ett økt fokus på bærekraftig økonomisk vekst.
+
+Så er det viktig å ta med at ikke alle mulige endogene og eksogene faktorer er tatt med i beregningene. Kanskje den viktigste faktoren er inflasjon, der det ikke er noe data tilgjengelig på inflasjonsnivået for de forskjellige landene fra år 2000 til 2019. Her er antageligvis inflasjonen ulik fra land til land, så det å skulle si noe om det uten data tilgjengelig er ikke fult så enkelt.
 
 ## Appendiks
+
+```{r Naturressurser og befolkning, echo=FALSE, message=FALSE, warning=FALSE, out.width="300px", out.height="300px"}
+plot6 <- ggplot(no_outliers, aes(x =  avg_p, y = avg_nry, na.rm = TRUE)) +
+  xlab("Befolkningsvekstrate") + 
+  ylab("Reduksjonsrate i naturressurser") + 
+  theme_minimal(base_size = 14) + 
+  geom_point(aes(size = poptot, color = region), alpha = 0.8) + 
+  scale_size_area(guide = "none", max_size = 14) + 
+ theme(legend.text = element_text(size = 5,color="black"),
+        legend.title = element_blank(),
+        legend.key.height = unit(.3, 'cm'),
+        legend.key.width = unit(.3, 'cm'))+ 
+  scale_colour_manual(values = rainbow(9)) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_rect(fill = 'white'))+
+  labs(title = "Figur 6: Befolkningsvekst og naturressurser") +
+  scale_y_continuous() +
+  scale_x_continuous(breaks=c(-1,0,1,2,3,4))+
+  geom_smooth(method = "lm", se = FALSE, colour = "black")
+plot6
+```
+
+```{r Lingre4, echo=FALSE, warning=FALSE}
+model4 <- lm(Reduksjonsrate_i_naturressurser  ~ Befolkningsvekstrate, data= regression)
+#tab_model(model4, CSS = css_theme("cells"))
+knitr::include_graphics("Model4.png")
+```
+
+Statistisk modell som viser forholdet mellom reduksjonsraten i naturressurser og befolkningsvekst. P-verdi under 0,05 eller 5% tilsvarer at det er en korrelasjon mellom reduksjon i ressurser og vekst i befolkning. Med andre ord, etterhvert som det fødes flere barn øker forbruket av naturressurser.
 
 R-kode på [GitHub](https://github.com/haavardchr/SOK-2011-Mappeevaluering)
 
